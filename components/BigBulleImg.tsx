@@ -11,7 +11,7 @@ export default function BigBulle() {
       <motion.img
         src={bigBulleSrc}
         alt="Kanel Bulle"
-        className=""
+        className="absolute right-0 mb-8 ml-8 w-16 sm:w-32 md:w-48 lg:w-64"
         initial={{ x: "100%", scale: 0.5, opacity: 0 }}
         animate={{ x: 0, scale: 2, opacity: 1 }}
         transition={{
