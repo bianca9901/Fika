@@ -5,6 +5,8 @@ import HeroP from "@/components/HeroP";
 import ContainerMaxWidth from "@/components/ContainerMaxWidth";
 import NavBottom from "@/components/NavBottom";
 import NavTop from "@/components/NavTop";
+import Menu from "@/components/Menu";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,12 +36,12 @@ export default function RootLayout({
         md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
         ></div>
 
-        <NavTop />
+        <Header/>
         
         <ContainerMaxWidth>
           {children}   
           <HeroP />
-          <BigBulle />
+          <Menu />    
         </ContainerMaxWidth>
 
         <NavBottom />

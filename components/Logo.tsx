@@ -1,4 +1,4 @@
-// Logo.js
+"use client"
 import React from 'react';
 import fikaLogo from "@/public/fika-logo.png";
 import { motion } from "framer-motion";
