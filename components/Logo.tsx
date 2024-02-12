@@ -1,5 +1,4 @@
 "use client"
-import React from 'react';
 import fikaLogo from "@/public/fika-logo.png";
 import { motion } from "framer-motion";
 
@@ -10,7 +9,7 @@ function Logo() {
     <motion.img
       src={fikaLogoSrc}
       alt="Fika Logo"
-      className="w-20 h-auto mr-4"
+      className="w-20 h-auto mr-11 ml-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

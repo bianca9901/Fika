@@ -6,7 +6,7 @@ function Menu() {
   return (
     <div
       className="py-4 sm:py-6 px-6 w-full max-w-screen-xl flex flex-wrap
-    gap-10"
+    gap-10 justify-center"
     >
       {fika.map((item) => (
         <div
