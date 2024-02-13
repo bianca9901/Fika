@@ -1,10 +1,25 @@
+"use client"
 import Image from "next/image";
 import { fika } from "@/lib/data";
 import AddToCartBtn from "./AddToCartBtn";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 function Menu() {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  })
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+ 
+
   return (
-    <div
+    <motion.div ref={ref}
+    style={{
+      scale: scaleProgress,
+    }}
       className="py-4 sm:py-6 px-6 w-full max-w-screen-xl flex flex-wrap
     gap-10 justify-center"
     >
@@ -13,7 +28,7 @@ function Menu() {
           key={item.id}
           className="mb-6 border border-gray-300 rounded-lg p-4 bg-blue-50"
         >
-          <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
+          <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
           <p className="text-gray-600 mb-2">{item.description}</p>
           <div className="flex mb-2">
             {item.tags.map((tag) => (
@@ -26,8 +41,10 @@ function Menu() {
               </span>
             ))}
           </div>
-          <div className="relative w-40 h-40 mx-auto mb-4 overflow-hidden
-          rounded-full shadow-image">
+          <div
+            className="relative w-40 h-40 mx-auto mb-4 overflow-hidden
+          rounded-full shadow-image"
+          >
             <Image
               src={item.image}
               alt={item.title}
@@ -39,7 +56,7 @@ function Menu() {
           <AddToCartBtn />
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 
