@@ -6,6 +6,7 @@ import NavBottom from "@/components/NavBottom";
 import Menu from "@/components/Menu";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import OpenTimes from "@/components/OpenTimes";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
           {children}
           <Menu />
         </ContainerMaxWidth>
+        <OpenTimes />
         <NavBottom />
       </body>
     </html>
