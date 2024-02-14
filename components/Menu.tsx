@@ -26,7 +26,7 @@ function Menu() {
       {fika.map((item) => (
         <div
           key={item.id}
-          className="mb-6 border border-gray-300 rounded-lg p-4 bg-blue-50"
+          className="mb-6 border border-gray-300 rounded-lg p-4 bg-black-50"
         >
           <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
           <p className="text-gray-600 mb-2">{item.description}</p>
