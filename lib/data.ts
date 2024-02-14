@@ -3,22 +3,22 @@ import chockladboll from "@/public/chocklad-boll.png";
 
 export const links = [
     {
-      name: "Home",
+      name: "HOME",
       hash: "#home",
       icon: "mdi-light:home"
     },
     {
-      name: "About us",
+      name: "ABOUT US",
       hash: "#about-us",
       icon: "fluent:people-team-48-regular"
     },
     {
-      name: "Menu",
+      name: "MENU",
       hash: "#menu",
       icon: "material-symbols-light:food-bank-outline"
     },
     {
-      name: "Contact",
+      name: "CONTACT",
       hash: "#contact",
       icon: "material-symbols-light:contact-phone-outline-sharp"
     },
@@ -27,7 +27,7 @@ export const links = [
   export const fika = [
     {
         id: 1,
-        title: "Bulle",
+        title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle
@@ -69,16 +69,26 @@ export const links = [
     },
     {
         id: 7,
-        title: "Bulle",
+        title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle
     },
     {
         id: 8,
-        title: "Bulle",
+        title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle
     }
 ] as const;
+
+export const days = [
+  { day: "Monday", time: "8:00 AM - 6:00 PM" },
+  { day: "Tuesday", time: "8:00 AM - 6:00 PM" },
+  { day: "Wednesday", time: "8:00 AM - 6:00 PM" },
+  { day: "Thursday", time: "8:00 AM - 6:00 PM" },
+  { day: "Friday", time: "8:00 AM - 6:00 PM" },
+  { day: "Saturday", time: "8:00 AM - 8:00 PM" },
+  { day: "Sunday", time: "10:00 AM - 6:00 PM" },
+] as const 
