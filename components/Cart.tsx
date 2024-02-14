@@ -6,7 +6,7 @@ export default function Cart() {
     <>
       <Icon
         icon="solar:cart-2-line-duotone"
-        className="w-10 h-auto text-blue-500 mr-4 ml-11"
+        className="w-10 h-auto text-blue-400 mr-4 ml-11"
       />
     </>
   );
