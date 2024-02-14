@@ -4,6 +4,7 @@ import { fika } from "@/lib/data";
 import AddToCartBtn from "./AddToCartBtn";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { formatCurrency } from "@/lib/formatCurrency";
 
 function Menu() {
   const ref = useRef<HTMLDivElement>(null)
@@ -30,6 +31,7 @@ function Menu() {
         >
           <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
           <p className="text-gray-600 mb-2">{item.description}</p>
+          <p className="text-blue-400 font-bold">{formatCurrency(item.price)}</p>
           <div className="flex mb-2">
             {item.tags.map((tag) => (
               <span
