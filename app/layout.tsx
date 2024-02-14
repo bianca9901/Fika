@@ -5,7 +5,7 @@ import ContainerMaxWidth from "@/components/ContainerMaxWidth";
 import NavBottom from "@/components/NavBottom";
 import Menu from "@/components/Menu";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import HeroSection from "@/components/HeroSection";
 import OpenTimes from "@/components/OpenTimes";
 
 const montserrat = Montserrat({
@@ -37,7 +37,7 @@ export default function RootLayout({
         lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
 
         <Header />
-        <Hero />
+        <HeroSection />
         <HeroP />
         <ContainerMaxWidth>
           {children}
