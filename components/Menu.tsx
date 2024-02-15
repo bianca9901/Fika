@@ -1,33 +1,44 @@
 "use client"
+import React, { useState, useRef } from 'react';
 import Image from "next/image";
 import { fika } from "@/lib/data";
 import AddToCartBtn from "./AddToCartBtn";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { formatCurrency } from "@/lib/formatCurrency";
 import CartBtnGroup from "./CartBtnGroup";
 
 export default function Menu() {
+  const [cartItems, setCartItems] = useState<{ id: number; quantity: number }[]>([]);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-  const quantity = 2;
-
-  const decreaseCartQuantity = (id: number) => {
-    
-  };
-
-  const increaseCartQuantity = (id: number) => {
-    
+  const addToCart = (id: number) => {
+    const existingItem = cartItems.find(item => item.id === id);
+    if (existingItem) {
+      setCartItems(prevCartItems => prevCartItems.map(item => item.id === id ?
+        { ...item, quantity: item.quantity + 1 } : item));
+    } else {
+      setCartItems(prevCartItems => [...prevCartItems, { id, quantity: 1 }]);
+    }
   };
 
   const removeFromCart = (id: number) => {
-    
+    setCartItems(prevCartItems => prevCartItems.filter(item => item.id !== id));
+  };
+
+  const decreaseCartQuantity = (id: number) => {
+    setCartItems(prevCartItems => prevCartItems.map(item => item.id === id ?
+      { ...item, quantity: item.quantity - 1 } :
+      item).filter(item => item.quantity > 0));
+  };
+
+  const increaseCartQuantity = (id: number) => {
+    setCartItems(prevCartItems => prevCartItems.map(item => item.id === id ?
+      { ...item, quantity: item.quantity + 1 } : item));
   };
 
   return (
@@ -69,15 +80,16 @@ export default function Menu() {
               sizes="(max-width: 640px) 100vw, 400px"
             />
           </div>
-          {quantity === 0 ? (
-            <AddToCartBtn />
-          ) : (
-            <CartBtnGroup 
-              quantity={quantity}
+          {cartItems.find(cartItem => cartItem.id === item.id) ? (
+            <CartBtnGroup
+              quantity={cartItems.find(cartItem => cartItem.id === item.id)
+              ?.quantity || 0}
               decreaseCartQuantity={() => decreaseCartQuantity(item.id)}
               increaseCartQuantity={() => increaseCartQuantity(item.id)}
               removeFromCart={() => removeFromCart(item.id)}
             />
+          ) : (
+            <AddToCartBtn onClick={() => addToCart(item.id)} />
           )}
         </div>
       ))}
