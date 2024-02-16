@@ -7,6 +7,7 @@ import Menu from "@/components/Menu";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import OpenTimes from "@/components/OpenTimes";
+import { CartProvider } from "@/context/CartContext";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -30,21 +31,27 @@ export default function RootLayout({
         className={`${montserrat.className} bg-gray-50  relative
          h-[5000] `}
       >
-        <div className="bg-blue-100 absolute top-0 -z-10 right-[11rem] h-full
-        w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-yellow-90 absolute top-0 -z-10 left-[-35rem] h-full
+        <div
+          className="bg-blue-100 absolute top-0 -z-10 right-[11rem] h-full
+        w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"
+        ></div>
+        <div
+          className="bg-yellow-90 absolute top-0 -z-10 left-[-35rem] h-full
         w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem]
-        lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
+        ></div>
 
-        <Header />
-        <HeroSection />
-        <HeroP />
-        <ContainerMaxWidth>
-          {children}
-          <Menu />
-        </ContainerMaxWidth>
-        <OpenTimes />
-        <NavBottom />
+        <CartProvider>
+          <Header />
+          <HeroSection />
+          <HeroP />
+          <ContainerMaxWidth>
+            {children}
+            <Menu />
+          </ContainerMaxWidth>
+          <OpenTimes />
+          <NavBottom />
+        </CartProvider>
       </body>
     </html>
   );
