@@ -30,56 +30,64 @@ export const links = [
         title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
-        image: bulle
+        image: bulle,
+        price: 29
     },
     {
         id: 2,
         title: "Chocklad Boll",
         description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll
+        image: chockladboll,
+        price: 29
     },
     {
         id: 3,
         title: "Chocklad Boll",
         description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll
+        image: chockladboll,
+        price: 29
     },
     {
         id: 4,
         title: "Chocklad Boll",
         description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll
+        image: chockladboll,
+        price: 29
     },
     {
         id: 5,
         title: "Chocklad Boll",
         description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll
+        image: chockladboll,
+        price: 29
     },
     {
         id: 6,
         title: "Chocklad Boll",
         description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll
+        image: chockladboll,
+        price: 29
     },
     {
         id: 7,
         title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
-        image: bulle
+        image: bulle,
+        price: 29
     },
     {
         id: 8,
         title: "Kanel Bulle",
         description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
-        image: bulle
+        image: bulle,
+        price: 29
     }
 ] as const;
 
