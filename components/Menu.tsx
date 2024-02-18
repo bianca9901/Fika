@@ -74,7 +74,8 @@ export default function Menu() {
             />
           ) : (
             <AddToCartBtn
-              onClick={() => addToCart({ id: item.id, quantity: 1 })}
+            onClick={() => addToCart({ id: item.id, quantity: 1,
+            title: item.title, price: item.price, image: item.image.src })}
             />
           )}
         </div>
