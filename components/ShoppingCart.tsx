@@ -1,6 +1,7 @@
 "use client";
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
+import { formatCurrency } from "@/lib/formatCurrency";
 
 type ShoppingCartProps = {
   onClose: () => void;
@@ -37,7 +38,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
             />
             <div className="flex justify-between">
               <p>{item.title}</p>
-              <p>{item.price}</p>
+              <p>{formatCurrency(item.price * item.quantity)}</p>
             </div>
             <p>Quantity: {item.quantity}</p>
           </div>
