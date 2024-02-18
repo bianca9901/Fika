@@ -1,6 +1,11 @@
 "use client"
 
-function ShoppingCart({ onClose }) {
+type ShoppingCartProps = {
+  onClose: () => void;
+}
+
+
+function ShoppingCart({ onClose }: ShoppingCartProps) {
   return (
     <div className="fixed inset-0 z-50 flex justify-end items-start">
       <div className="w-96 bg-white h-full overflow-y-auto p-4 rounded-l-lg
