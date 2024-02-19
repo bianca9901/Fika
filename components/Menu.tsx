@@ -7,6 +7,7 @@ import AddToCartBtn from "./AddToCartBtn";
 import CartBtnGroup from "./CartBtnGroup";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { fika } from "@/lib/data";
+import SectionHeading from "./SectionHeading";
 
 export default function Menu() {
   //const { scrollYProgress } = useScroll({
@@ -23,6 +24,9 @@ export default function Menu() {
   } = useCart();
 
   return (
+    <>
+    <SectionHeading headingText1="Only traditional Fika on our" headingText2="Menu" />
+    
     <motion.div
       //ref={ref}
       //style={{ scale: scaleProgress }}
@@ -35,7 +39,6 @@ export default function Menu() {
           className="mb-6 border border-gray-300 rounded-lg p-4 bg-black-50"
         >
           <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
-          <p className="text-gray-600 mb-2">{item.description}</p>
           <p className="text-blue-400 font-bold">
             {formatCurrency(item.price)}
           </p>
@@ -81,5 +84,8 @@ export default function Menu() {
         </div>
       ))}
     </motion.div>
+
+    </>
   );
+
 }
