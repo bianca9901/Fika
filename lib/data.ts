@@ -2,6 +2,23 @@ import bulle from '../public/big-bulle.png';
 import chockladboll from '../public/chocklad-boll.png';
 import semla from '../public/semla.png'
 import kladdkaka from '../public/kladdkaka.png'
+import profileimage1 from '../public/profile1.png'
+import profileimage2 from '../public/profile2.png'
+import profileimage3 from '../public/profile3.png'
+import profileimage4 from '../public/profile4.png'
+import profileimage5 from '../public/profile5.png'
+import profileimage6 from '../public/profile6.png'
+import profileimage7 from '../public/profile7.png'
+
+export const profileImages = [
+  profileimage1,
+  profileimage2,
+  profileimage3,
+  profileimage4,
+  profileimage5,
+  profileimage6,
+  profileimage7
+]
 
 export const links = [
     {
@@ -30,7 +47,6 @@ export const links = [
     {
         id: 1,
         title: "Kanel Bulle",
-        description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle,
         price: 29
@@ -38,7 +54,6 @@ export const links = [
     {
         id: 2,
         title: "Chocklad Boll",
-        description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
         image: chockladboll,
         price: 29
@@ -46,7 +61,6 @@ export const links = [
     {
         id: 3,
         title: "Semla",
-        description: "Semla",
         tags: ["Sweet", "Cream"],
         image: semla,
         price: 29
@@ -54,7 +68,6 @@ export const links = [
     {
         id: 4,
         title: "Kladdkaka",
-        description: "Kladdkaka",
         tags: ["Sweet", "Chocolate"],
         image: kladdkaka,
         price: 29
@@ -62,7 +75,6 @@ export const links = [
     {
         id: 5,
         title: "Chocklad Boll",
-        description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
         image: chockladboll,
         price: 29
@@ -70,7 +82,6 @@ export const links = [
     {
         id: 6,
         title: "Chocklad Boll",
-        description: "Chockladboll",
         tags: ["Sweet", "Chocolate"],
         image: chockladboll,
         price: 29
@@ -78,7 +89,6 @@ export const links = [
     {
         id: 7,
         title: "Kanel Bulle",
-        description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle,
         price: 29
@@ -86,7 +96,6 @@ export const links = [
     {
         id: 8,
         title: "Kanel Bulle",
-        description: "Kanelbulle",
         tags: ["Sweet", "Cinnamon"],
         image: bulle,
         price: 29
