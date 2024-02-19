@@ -1,5 +1,7 @@
-import bulle from "@/public/big-bulle.png";
-import chockladboll from "@/public/chocklad-boll.png";
+import bulle from '../public/big-bulle.png';
+import chockladboll from '../public/chocklad-boll.png';
+import semla from '../public/semla.png'
+import kladdkaka from '../public/kladdkaka.png'
 
 export const links = [
     {
@@ -43,18 +45,18 @@ export const links = [
     },
     {
         id: 3,
-        title: "Chocklad Boll",
-        description: "Chockladboll",
-        tags: ["Sweet", "Chocolate"],
-        image: chockladboll,
+        title: "Semla",
+        description: "Semla",
+        tags: ["Sweet", "Cream"],
+        image: semla,
         price: 29
     },
     {
         id: 4,
-        title: "Chocklad Boll",
-        description: "Chockladboll",
+        title: "Kladdkaka",
+        description: "Kladdkaka",
         tags: ["Sweet", "Chocolate"],
-        image: chockladboll,
+        image: kladdkaka,
         price: 29
     },
     {
