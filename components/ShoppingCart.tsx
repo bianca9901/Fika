@@ -10,6 +10,8 @@ type ShoppingCartProps = {
 function ShoppingCart({ onClose }: ShoppingCartProps) {
   const { cartItems } = useCart();
 
+  const totalSum = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
   return (
     <div className="fixed inset-0 z-50 flex justify-end items-start">
       <div
@@ -43,6 +45,9 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
             <p>Quantity: {item.quantity}</p>
           </div>
         ))}
+        <div className="mt-4">
+          <p className="text-lg font-semibold">Total Sum: {formatCurrency(totalSum)}</p>
+        </div>
       </div>
       <div className="fixed inset-0 z-40" onClick={onClose}></div>
     </div>
