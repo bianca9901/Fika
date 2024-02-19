@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heroimg from "@/public/hero-img.png";
-import HeroAction from "./HeroAction";
+import HeroMessage from "./HeroMessage";
 
 function HeroSection() {
   return (
@@ -9,7 +9,7 @@ function HeroSection() {
         className="absolute top-0 left-0 w-full h-full z-10 flex items-center
       justify-center"
       >
-        <HeroAction />
+        <HeroMessage />
       </div>
       <Image
         src={heroimg}
