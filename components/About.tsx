@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 function About() {
   return (
-    <>
+    <section id="about-us">
       <SectionHeading
         headingText1="only "
         headingText2="true fika lovers work here"
@@ -30,7 +30,7 @@ function About() {
           modi repudiandae vitae dolorum! Perspiciatis..
         </p>
       </div>
-    </>
+    </section>
   );
 }
 

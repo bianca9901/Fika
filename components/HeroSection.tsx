@@ -4,6 +4,7 @@ import HeroMessage from "./HeroMessage";
 
 function HeroSection() {
   return (
+    <section id="home">
     <div className="relative w-full h-screen">
       <div
         className="absolute top-0 left-0 w-full h-full z-10 flex items-center
@@ -18,6 +19,7 @@ function HeroSection() {
         className="object-cover"
       />
     </div>
+    </section>
   );
 }
 

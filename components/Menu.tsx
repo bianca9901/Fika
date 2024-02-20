@@ -24,7 +24,7 @@ export default function Menu() {
   } = useCart();
 
   return (
-    <>
+    <section id="menu">
       <SectionHeading
         headingText1="Only traditional Fika on our"
         headingText2="Menu"
@@ -94,6 +94,6 @@ export default function Menu() {
           </div>
         ))}
       </motion.div>
-    </>
+    </section>
   );
 }
