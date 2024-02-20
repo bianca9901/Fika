@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 function About() {
   return (
-    <section id="about-us">
+    <section id="about-us" className="scroll-mt-28">
       <SectionHeading
         headingText1="only "
         headingText2="true fika lovers work here"

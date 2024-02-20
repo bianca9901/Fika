@@ -24,7 +24,7 @@ export default function Menu() {
   } = useCart();
 
   return (
-    <section id="menu">
+    <section id="menu" className="scroll-mt-28">
       <SectionHeading
         headingText1="Only traditional Fika on our"
         headingText2="Menu"

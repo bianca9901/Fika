@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 function OpenTimes() {
   return (
-    <section>
+    <section id="open-times" className="scroll-mt-28">
     <div className="bg-blue-300 p-6 rounded-lg shadow-md">
     <SectionHeading headingText1="Open " headingText2="times"/>
       <div className="grid md:grid-cols-2 gap-4">
