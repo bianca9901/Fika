@@ -25,67 +25,75 @@ export default function Menu() {
 
   return (
     <>
-    <SectionHeading headingText1="Only traditional Fika on our" headingText2="Menu" />
-    
-    <motion.div
-      //ref={ref}
-      //style={{ scale: scaleProgress }}
-      className="py-4 sm:py-6 px-6 w-full max-w-screen-xl flex flex-wrap gap-10
-      justify-center"
-    >
-      {fika.map((item) => (
-        <div
-          key={item.id}
-          className="mb-6 border border-gray-300 rounded-lg p-4 bg-black-50"
-        >
-          <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
-          <p className="text-blue-400 font-bold">
-            {formatCurrency(item.price)}
-          </p>
-          <div className="flex mb-2">
-            {item.tags.map((tag) => (
-              <span
-                key={tag}
-                className="bg-blue-200 text-gray-700 px-2 py-1 rounded-full
-                text-sm mr-2"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          <div
-            className="relative w-40 h-40 mx-auto mb-4 overflow-hidden
-          rounded-full shadow-image"
-          >
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 400px"
-            />
-          </div>
-          {cartItems.find((cartItem) => cartItem.id === item.id) ? (
-            <CartBtnGroup
-              quantity={
-                cartItems.find((cartItem) => cartItem.id === item.id)
-                  ?.quantity || 0
-              }
-              decreaseCartQuantity={() => decreaseQuantity(item.id)}
-              increaseCartQuantity={() => increaseQuantity(item.id)}
-              removeFromCart={() => removeFromCart(item.id)}
-            />
-          ) : (
-            <AddToCartBtn
-            onClick={() => addToCart({ id: item.id, quantity: 1,
-            title: item.title, price: item.price, image: item.image.src })}
-            />
-          )}
-        </div>
-      ))}
-    </motion.div>
+      <SectionHeading
+        headingText1="Only traditional Fika on our"
+        headingText2="Menu"
+      />
 
+      <motion.div
+        //ref={ref}
+        //style={{ scale: scaleProgress }}
+        className="py-4 sm:py-6 px-6 w-full max-w-screen-xl flex flex-wrap
+        gap-10 justify-center"
+      >
+        {fika.map((item) => (
+          <div
+            key={item.id}
+            className="mb-6 border border-gray-300 rounded-lg p-4"
+          >
+            <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
+            <p className="text-blue-600 font-bold mb-2">
+              {formatCurrency(item.price)}
+            </p>
+            <div className="flex mb-2">
+              {item.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-blue-200 text-gray-700 px-2 py-1
+                  rounded-full text-sm mr-2"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div
+              className="relative w-40 h-40 mx-auto mb-4 overflow-hidden
+          rounded-full shadow-image"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 400px"
+              />
+            </div>
+            {cartItems.find((cartItem) => cartItem.id === item.id) ? (
+              <CartBtnGroup
+                quantity={
+                  cartItems.find((cartItem) => cartItem.id === item.id)
+                    ?.quantity || 0
+                }
+                decreaseCartQuantity={() => decreaseQuantity(item.id)}
+                increaseCartQuantity={() => increaseQuantity(item.id)}
+                removeFromCart={() => removeFromCart(item.id)}
+              />
+            ) : (
+              <AddToCartBtn
+                onClick={() =>
+                  addToCart({
+                    id: item.id,
+                    quantity: 1,
+                    title: item.title,
+                    price: item.price,
+                    image: item.image.src,
+                  })
+                }
+              />
+            )}
+          </div>
+        ))}
+      </motion.div>
     </>
   );
-
 }
