@@ -1,12 +1,7 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import HeroP from "@/components/HeroP";
-import ContainerMaxWidth from "@/components/ContainerMaxWidth";
-import NavBottom from "@/components/NavBottom";
-import Menu from "@/components/Menu";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import OpenTimes from "@/components/OpenTimes";
+import NavBottom from "@/components/NavBottom";
 import { CartProvider } from "@/context/CartContext";
 
 const montserrat = Montserrat({
@@ -32,7 +27,7 @@ export default function RootLayout({
          h-[5000] `}
       >
         <div
-          className="bg-blue-100 absolute top-0 -z-10 right-[11rem] h-full
+          className="bg-blue-300 absolute top-0 -z-10 right-[11rem] h-full
         w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"
         ></div>
         <div
@@ -43,13 +38,7 @@ export default function RootLayout({
 
         <CartProvider>
           <Header />
-          <HeroSection />
-          <HeroP />
-          <ContainerMaxWidth>
-            {children}
-            <Menu />
-          </ContainerMaxWidth>
-          <OpenTimes />
+          {children}
           <NavBottom />
         </CartProvider>
       </body>
