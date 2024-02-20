@@ -27,14 +27,14 @@ export const links = [
       icon: "mdi-light:home"
     },
     {
-      name: "ABOUT US",
-      hash: "#about-us",
-      icon: "fluent:people-team-48-regular"
-    },
-    {
       name: "MENU",
       hash: "#menu",
       icon: "material-symbols-light:food-bank-outline"
+    },
+    {
+      name: "ABOUT US",
+      hash: "#about-us",
+      icon: "fluent:people-team-48-regular"
     },
     {
       name: "CONTACT",
