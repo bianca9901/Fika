@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import Header from "@/components/Header";
 import NavBottom from "@/components/NavBottom";
 import { CartProvider } from "@/context/CartContext";
+import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,11 +37,13 @@ export default function RootLayout({
         lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
         ></div>
 
+        <ActiveSectionContextProvider>
         <CartProvider>
           <Header />
           {children}
           <NavBottom />
         </CartProvider>
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
