@@ -5,8 +5,12 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useScrollDirection }  from '@/lib/hooks';
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 export default function NavBottom() {
+  const {activeSection, setActiveSection} = useActiveSectionContext()
+
   const scrollDirection = useScrollDirection();
   const shouldApplyOpacity = scrollDirection === 'down';
 
@@ -17,7 +21,7 @@ export default function NavBottom() {
       items-center sm:hidden 
       ${ shouldApplyOpacity ? 'bg-opacity-70' : ''}`}
     >
-      <ul className="flex gap-10 text-lg font-semibold text-gray-600">
+      <ul className="flex gap-10 text-lg font-semibold ">
         {links.map((link) => (
           <motion.li
             className="relative"
@@ -26,8 +30,14 @@ export default function NavBottom() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Link href={link.hash}>
-              <Icon className="w-[36px] h-[36px]" icon={link.icon} />
+            <Link
+            href={link.hash}
+            onClick={() => setActiveSection(link.name)}
+            className={clsx({
+              "text-blue-300": activeSection !== link.name,
+              "text-blue-400": activeSection === link.name,
+            })}>
+              <Icon className="w-[36px] h-[36px]" icon={link.icon}/>
             </Link>
           </motion.li>
         ))}
