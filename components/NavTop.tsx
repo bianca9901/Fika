@@ -1,22 +1,25 @@
 "use client";
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 export default function NavTop() {
-  const [activeSection, setActiveSection] = useState("HOME");
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext()
 
   return (
-    <nav className="hidden sm:flex gap-10 list-none">
+    <nav className="hidden sm:flex gap-10">
       {links.map((link) => (
-        <motion.li className="relative" key={link.hash}>
+        <motion.ul className="relative" key={link.hash}>
           <Link
             href={link.hash}
-            onClick={() => setActiveSection(link.name)}
+            onClick={() => {
+              setActiveSection(link.name)
+              setTimeOfLastClick(Date.now())
+            }}
             className={clsx({
-              "text-gray-500": activeSection !== link.name,
+              "text-gray-700": activeSection !== link.name,
               "text-black": activeSection === link.name,
             })}
           >
@@ -34,7 +37,7 @@ export default function NavTop() {
               transition={{ duration: 0.9, delay: 0.2 }}
             ></motion.span>
           </Link>
-        </motion.li>
+        </motion.ul>
       ))}
     </nav>
   );
