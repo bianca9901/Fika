@@ -1,10 +1,14 @@
+"use client"
 import Image from "next/image";
 import { profileImages } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
+import { useSectionInView } from "@/lib/hooks";
 
 function About() {
+  const { ref } = useSectionInView("ABOUT US")
+
   return (
-    <section id="about-us" className="scroll-mt-28">
+    <section ref={ref} id="about-us" className="scroll-mt-28">
       <SectionHeading
         headingText1="only "
         headingText2="true fika lovers work here"

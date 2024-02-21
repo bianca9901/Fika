@@ -8,8 +8,12 @@ import CartBtnGroup from "./CartBtnGroup";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { fika } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Menu() {
+  const { ref } = useSectionInView("MENU")
+
+
   //const { scrollYProgress } = useScroll({
   //target: useRef<HTMLDivElement>(null),
   //offset: ['0 1', '1.33 1'],
@@ -24,7 +28,7 @@ export default function Menu() {
   } = useCart();
 
   return (
-    <section id="menu" className="scroll-mt-28">
+    <section ref={ref} id="menu" className="scroll-mt-28">
       <SectionHeading
         headingText1="Only traditional Fika on our"
         headingText2="Menu"
