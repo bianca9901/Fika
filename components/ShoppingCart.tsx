@@ -10,7 +10,10 @@ type ShoppingCartProps = {
 function ShoppingCart({ onClose }: ShoppingCartProps) {
   const { cartItems } = useCart();
 
-  const totalSum = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalSum = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end items-start">
@@ -28,26 +31,33 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
           </button>
         </div>
         <div className="border-b border-gray-300 mb-4"></div>
-        {cartItems.map((item) => (
-          <div key={item.id} className="mb-4">
-            <Image
-              src={item.image}
-              alt={item.title}
-              className="rounded-md mr-2
-            w-auto h-auto"
-              width={60}
-              height={60}
-            />
-            <div className="flex justify-between">
-              <p>{item.title}</p>
-              <p>{formatCurrency(item.price * item.quantity)}</p>
+        {cartItems.length === 0 ? (
+          <p>You have nothing in your cart yet</p>
+        ) : (
+          cartItems.map((item) => (
+            <div key={item.id} className="mb-4">
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="rounded-md mr-2 w-auto h-auto"
+                width={60}
+                height={60}
+              />
+              <div className="flex justify-between">
+                <p>{item.title}</p>
+                <p>{formatCurrency(item.price * item.quantity)}</p>
+              </div>
+              <p>Quantity: {item.quantity}</p>
             </div>
-            <p>Quantity: {item.quantity}</p>
+          ))
+        )}
+        {cartItems.length > 0 && (
+          <div className="mt-4">
+            <p className="text-lg font-semibold">
+              Total Sum: {formatCurrency(totalSum)}
+            </p>
           </div>
-        ))}
-        <div className="mt-4">
-          <p className="text-lg font-semibold">Total Sum: {formatCurrency(totalSum)}</p>
-        </div>
+        )}
       </div>
       <div className="fixed inset-0 z-40" onClick={onClose}></div>
     </div>
