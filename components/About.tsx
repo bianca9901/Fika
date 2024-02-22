@@ -1,11 +1,14 @@
-"use client"
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import { profileImages } from "@/lib/data";
+import { profileData } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
+import SpeechBubble from "./SpeechBubble";
 
 function About() {
-  const { ref } = useSectionInView("ABOUT US")
+  const { ref } = useSectionInView("ABOUT US");
+  const [selectedProfile, setSelectedProfile] = useState<number | null>(null);
 
   return (
     <section ref={ref} id="about-us" className="scroll-mt-28">
@@ -14,17 +17,27 @@ function About() {
         headingText2="true fika lovers work here"
       />
       <div className="flex items-center justify-center space-x-4 flex-wrap">
-        {profileImages.map((profileImage, index) => (
-          <Image
+        {profileData.map((profile, index) => (
+          <div
             key={index}
-            src={profileImage}
-            alt={`Profile image ${index + 1} of workers at Fika`}
-            width={192}
-            height={192}
-            quality={95}
-            className="h-24 w-24 rounded-full object-cover border-[0.35rem]
-            border-yellow-2 shadow-xl"
-          />
+            onMouseEnter={() => setSelectedProfile(index)}
+            onMouseLeave={() => setSelectedProfile(null)}
+            className="relative inline-block"
+          >
+            <Image
+              src={profile.image}
+              alt={`Profile image ${index + 1} of workers at Fika`}
+              className="rounded-full border-[0.35rem] shadow-xl"
+              width={137}
+            />
+            {selectedProfile === index && (
+              <div className="absolute z-10">
+                <SpeechBubble>
+                  <p className="text-xs">{profile.text}</p>
+                </SpeechBubble>
+              </div>
+            )}
+          </div>
         ))}
         <p className="mt-10">
           Lorem ipsum dolor sit aentium amet tempore culpa saepe dolorum
