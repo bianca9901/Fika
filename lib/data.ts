@@ -10,15 +10,38 @@ import profileimage5 from '../public/profile5.png'
 import profileimage6 from '../public/profile6.png'
 import profileimage7 from '../public/profile7.png'
 
-export const profileImages = [
-  profileimage1,
-  profileimage2,
-  profileimage3,
-  profileimage4,
-  profileimage5,
-  profileimage6,
-  profileimage7
-]
+// data.ts
+export const profileData = [
+  {
+    image: profileimage1,
+    text: "I love working here because of the friendly environment and delicious coffee!😄"
+  },
+  {
+    image: profileimage2,
+    text: "The teamwork and camaraderie among coworkers make every day enjoyable😍"
+  },
+  {
+    image: profileimage3,
+    text: "Working here allows me to meet people from all over the world wanting to try fika🌎"
+  },
+  {
+    image: profileimage4,
+    text: "I love how Swedish culture is embraced here!🌈"
+  },
+  {
+    image: profileimage5,
+    text: "I enjoy interacting with customers and creating memorable experiences for them!"
+  },
+  {
+    image: profileimage6,
+    text: "The opportunity to learn and grow keeps me motivated every day👩🏾‍🍳"
+  },
+  {
+    image: profileimage7,
+    text: "The cozy atmosphere here makes it feel like home🤭"
+  }
+];
+
 
 export const links = [
     {
