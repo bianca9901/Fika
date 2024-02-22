@@ -5,6 +5,7 @@ import { profileData } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import SpeechBubble from "./SpeechBubble";
+import { motion } from "framer-motion";
 
 function About() {
   const { ref } = useSectionInView("ABOUT US");
@@ -24,14 +25,16 @@ function About() {
             onMouseLeave={() => setSelectedProfile(null)}
             className="relative inline-block"
           >
-            <Image
-              src={profile.image}
-              alt={`Profile image ${index + 1} of workers at Fika`}
-              className="rounded-full border-[0.35rem] shadow-xl"
-              width={137}
-            />
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Image
+                src={profile.image}
+                alt={`Profile image ${index + 1} of workers at Fika`}
+                className="rounded-full border-[0.35rem] shadow-xl"
+                width={137}
+              />
+            </motion.div>
             {selectedProfile === index && (
-              <div className="absolute z-10">
+              <div className="absolute z-20">
                 <SpeechBubble>
                   <p className="text-xs">{profile.text}</p>
                 </SpeechBubble>
