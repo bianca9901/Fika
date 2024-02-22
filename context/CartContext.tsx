@@ -59,7 +59,7 @@ type CartProviderProps = {
   const decreaseQuantity = (id: number) => {
     setCartItems(
       cartItems.map((item) =>
-        item.id === id && item.quantity > 0
+        item.id === id && item.quantity > 1
           ? { ...item, quantity: item.quantity - 1 } : item
       )
     );
