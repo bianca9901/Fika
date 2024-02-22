@@ -31,7 +31,7 @@ function CartBtnGroup({
             </button>
           </div>
           <button
-            className="bg-blue-200 hover:bg-blue-300 text-gray px-2 py-1
+            className="bg-slate-200 hover:bg-slate-300 text-gray px-2 py-1
             rounded-md text-sm"
             onClick={removeFromCart}
           >
