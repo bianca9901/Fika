@@ -18,19 +18,19 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
   return (
     <div className="fixed inset-0 z-50 flex justify-end items-start">
       <div
-        className="w-96 bg-white h-full overflow-y-auto p-4 rounded-l-lg
+        className="w-96 bg-blue-50 h-full overflow-y-auto p-4 rounded-l-lg
       shadow-lg"
       >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Shopping Cart</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-800 focus:outline-none"
+            className="text-slate-500"
           >
             Close
           </button>
         </div>
-        <div className="border-b border-gray-300 mb-4"></div>
+        <div className="border-b border-slate-200 mb-4"></div>
         {cartItems.length === 0 ? (
           <p>You have nothing in your cart yet</p>
         ) : (
@@ -52,7 +52,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
           ))
         )}
         {cartItems.length > 0 && (
-          <div className="mt-4">
+          <div className="mt-10">
             <p className="text-lg font-semibold">
               Total Sum: {formatCurrency(totalSum)}
             </p>
