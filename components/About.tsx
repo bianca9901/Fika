@@ -31,6 +31,7 @@ function About() {
                 alt={`Profile image ${index + 1} of workers at Fika`}
                 className="rounded-full border-[0.35rem] shadow-xl"
                 width={137}
+                quality={70}
               />
             </motion.div>
             {selectedProfile === index && (
