@@ -1,6 +1,6 @@
 "use client";
 import fikaLogo from "@/public/fika-logo.png";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Logo() {
   const fikaLogoSrc = fikaLogo.src;
@@ -10,14 +10,14 @@ function Logo() {
   };
 
   return (
-    <motion.img
+    <Image
       onClick={handleLogoClick}
       src={fikaLogoSrc}
       alt="Fika Logo"
-      className="w-20 h-auto mr-11 ml-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      className="mr-11 ml-4"
+      width={80}
+      height={70}
+      quality={70}
     />
   );
 }
