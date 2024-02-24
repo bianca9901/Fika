@@ -8,13 +8,13 @@ export default function Cart() {
   const { cartItems } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const totalQuantity = cartItems.reduce(
+  const totalItemsInCart = cartItems.reduce(
     (total, currentItem) => total + currentItem.quantity,
     0
   );
 
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
   };
 
   const handleCloseCart = () => {
@@ -27,13 +27,13 @@ export default function Cart() {
       <Icon
         icon="solar:cart-2-line-duotone"
         className="w-10 h-auto text-blue-400 mr-4 ml-11"
-        onClick={toggleCart}
+        onClick={handleOpenCart}
       />
       <div
         className="rounded-full bg-yellow-300 flex justify-center
       items-center w-6 h-6 absolute bottom-0 right-0 transform text-black"
       >
-        {totalQuantity}
+        { totalItemsInCart }
       </div>
       {isCartOpen && <ShoppingCart onClose={handleCloseCart} />}
     </div>
