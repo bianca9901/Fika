@@ -4,10 +4,10 @@ import HeroBtn from "./HeroBtn"
 
 function HeroMessage() {
   return (
-    <div className="py-4 sm:py-6 px-6 bg-blue-50 opacity-1 rounded">
-      <h1 className="text-3xl text-black mb-4 mt-12 max-w-md
+    <div className="ml-4">
+      <h1 className="text-3xl md:text-4xl text-white mb-4 max-w-md
       md:max-w-lg lg:max-w-xl mx-auto uppercase">
-        Experience the{" "}
+        <span className="text-4xl md:text-7xl">Experience</span> the{" "}
         <motion.span
           animate={{
             y: [-10, 10],
@@ -20,9 +20,9 @@ function HeroMessage() {
           }}
           style={{ display: "inline-block" }}
         >
-          <span className="text-blue-300">Sweet</span> Side of Sweden
+          <span className="text-yellow-300 text-4xl md:text-7xl">Sweet</span> Side of Sweden
         </motion.span>
-        <span className="text-blue-300">.</span>
+        <span className="text-yellow-300">.</span>
       </h1>
       <HeroBtn />
     </div>
