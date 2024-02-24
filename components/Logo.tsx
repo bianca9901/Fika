@@ -16,7 +16,7 @@ function Logo() {
       alt="Fika Logo"
       className="mr-11 ml-4"
       width={80}
-      height={70}
+      height={80}
       quality={70}
     />
   );
