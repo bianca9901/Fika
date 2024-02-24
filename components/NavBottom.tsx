@@ -17,14 +17,14 @@ export default function NavBottom() {
   return (
     <nav
       className={`h-[4.25rem] fixed bottom-0 left-0 w-full bg-yellow-300
-      border-t border-gray-200 rounded-t-3xl flex flex-row justify-around
+      border-t border-gray-200 rounded-t-3xl flex justify-around
       items-center sm:hidden 
       ${ shouldApplyOpacity ? 'bg-opacity-70' : ''}`}
     >
-      <ul className="flex gap-10 text-lg font-semibold ">
+      <ul className="flex gap-10">
         {links.map((link) => (
           <motion.li
-            className="relative"
+            className="relative flex gap-10 text-lg font-semibold "
             key={link.hash}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
@@ -33,6 +33,7 @@ export default function NavBottom() {
             <Link
             href={link.hash}
             onClick={() => setActiveSection(link.name)}
+            aria-label={link.name}
             className={clsx({
               "text-blue-300": activeSection !== link.name,
               "text-blue-400": activeSection === link.name,
@@ -41,7 +42,7 @@ export default function NavBottom() {
             </Link>
           </motion.li>
         ))}
-      </ul>
+        </ul>
     </nav>
   );
 }
