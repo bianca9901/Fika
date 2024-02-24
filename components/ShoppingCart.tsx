@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
 import { formatCurrency } from "@/lib/formatCurrency";
@@ -15,12 +16,26 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
     0
   );
 
+  useEffect(() => {
+    // Closes the shopping cart when clicking outside of it
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as HTMLElement;
+      if (!target.closest(".shopping-cart")) {
+        onClose();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
-    <div className="fixed inset-0 z-50 flex justify-end items-start">
-      <div
-        className="w-96 bg-blue-50 h-full overflow-y-auto p-4 rounded-l-lg
-      shadow-lg"
-      >
+    <div className="fixed inset-0 z-50 flex justify-end items-center
+    bg-black bg-opacity-50">
+      <div className="absolute right-0 top-0 h-full w-full max-w-md p-4
+      rounded-lg shadow-lg bg-white overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl">Shopping Cart</h2>
           <button
@@ -39,7 +54,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
               <Image
                 src={item.image}
                 alt={item.title}
-                className="rounded-md mr-2 w-auto h-auto"
+                className="rounded-md mr-2"
                 width={60}
                 height={60}
               />
@@ -52,14 +67,13 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
           ))
         )}
         {cartItems.length > 0 && (
-          <div className="mt-10">
+          <div className="mt-4">
             <p className="text-lg font-semibold">
               Total Sum: {formatCurrency(totalSum)}
             </p>
           </div>
         )}
       </div>
-      <div className="fixed inset-0 z-40" onClick={onClose}></div>
     </div>
   );
 }
