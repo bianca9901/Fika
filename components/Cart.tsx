@@ -25,8 +25,8 @@ export default function Cart() {
   return (
     <div className="relative">
       <Icon
-        icon="solar:cart-2-line-duotone"
-        className="w-10 h-auto text-blue-400 mr-4 ml-11"
+        icon="ei:cart"
+        className="w-10 h-auto text-sky-400 mr-4 ml-11"
         onClick={handleOpenCart}
       />
       <div
