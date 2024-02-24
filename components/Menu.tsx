@@ -11,8 +11,7 @@ import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Menu() {
-  const { ref } = useSectionInView("MENU")
-
+  const { ref } = useSectionInView("MENU");
 
   //const { scrollYProgress } = useScroll({
   //target: useRef<HTMLDivElement>(null),
@@ -60,18 +59,16 @@ export default function Menu() {
                 </span>
               ))}
             </div>
-            <div
-              className="relative w-40 h-40 mx-auto mb-4 overflow-hidden
-          rounded-full shadow-image"
-            >
+            <div className="relative flex justify-center items-center mx-auto mb-4 rounded-full shadow-image">
               <Image
                 src={item.image}
                 alt={item.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, 400px"
+                width={150}
+                height={150}
+                quality={70}
               />
             </div>
+
             {cartItems.find((cartItem) => cartItem.id === item.id) ? (
               <CartBtnGroup
                 quantity={
