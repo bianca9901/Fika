@@ -9,9 +9,10 @@ export default function NavTop() {
   const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext()
 
   return (
-    <nav className="hidden sm:flex gap-10">
+    <nav className="hidden sm:flex">
+      <ul className="flex gap-10">
       {links.map((link) => (
-        <motion.ul className="relative" key={link.hash}>
+        <motion.li className="relative" key={link.hash}>
           <Link
             href={link.hash}
             onClick={() => {
@@ -37,8 +38,9 @@ export default function NavTop() {
               transition={{ duration: 0.9, delay: 0.2 }}
             ></motion.span>
           </Link>
-        </motion.ul>
+        </motion.li>
       ))}
+      </ul>
     </nav>
   );
 }
