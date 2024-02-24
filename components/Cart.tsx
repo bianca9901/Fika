@@ -26,12 +26,13 @@ export default function Cart() {
     <div className="relative">
       <Icon
         icon="ei:cart"
-        className="w-10 h-auto text-sky-400 mr-4 ml-11"
+        className="w-10 h-auto text-sky-400 mr-4 ml-11 cursor-pointer"
         onClick={handleOpenCart}
       />
       <div
         className="rounded-full bg-yellow-300 flex justify-center
-      items-center w-6 h-6 absolute bottom-0 right-0 transform text-black"
+      items-center w-6 h-6 absolute bottom-0 right-0 transform text-black
+      "
       >
         { totalItemsInCart }
       </div>
