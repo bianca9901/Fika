@@ -1,14 +1,14 @@
 import "./globals.css";
-import { Montserrat } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import Header from "@/components/Header";
 import NavBottom from "@/components/NavBottom";
 import { CartProvider } from "@/context/CartContext";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 
-const montserrat = Montserrat({
+const quicksand = Quicksand({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: "200",
+  weight: ["300", "700"],
 });
 
 export const metadata = {
@@ -24,25 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${montserrat.className} bg-gray-50  relative
-         h-[5000] `}
+        className={`${quicksand.className} bg-sky-400 relative
+        `}
       >
-        <div
-          className="bg-blue-300 absolute top-0 -z-10 right-[11rem] h-full
-        w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"
-        ></div>
-        <div
-          className="bg-yellow-90 absolute top-0 -z-10 left-[-35rem] h-full
-        w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem]
-        lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
-        ></div>
-
         <ActiveSectionContextProvider>
-        <CartProvider>
-          <Header />
-          {children}
-          <NavBottom />
-        </CartProvider>
+          <CartProvider>
+            <Header />
+            {children}
+            <NavBottom />
+          </CartProvider>
         </ActiveSectionContextProvider>
       </body>
     </html>
