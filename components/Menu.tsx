@@ -44,8 +44,8 @@ export default function Menu() {
             key={item.id}
             className="mb-6 border border-gray-300 rounded-lg p-4"
           >
-            <h2 className="text-xl font-bold mb-2 uppercase">{item.title}</h2>
-            <p className="text-blue-600 font-bold mb-2">
+            <h2 className="text-xl mb-2 uppercase">{item.title}</h2>
+            <p className="text-blue-600 mb-2">
               {formatCurrency(item.price)}
             </p>
             <div className="flex mb-2">

@@ -22,7 +22,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
       shadow-lg"
       >
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">Shopping Cart</h2>
+          <h2 className="text-xl">Shopping Cart</h2>
           <button
             onClick={onClose}
             className="text-slate-500"

@@ -9,7 +9,7 @@ type SectionHeadingProps = {
 function SectionHeading({ headingText1, headingText2 }: SectionHeadingProps) {
   return (
     <div className="py-4 sm:py-6 px-6 w-full">
-      <h1 className="text-3xl font-bold text-white mt-12 max-w-md
+      <h1 className="text-3xl text-white mt-12 max-w-md
       md:max-w-lg lg:max-w-xl mx-auto uppercase">
         {headingText1}
         <motion.span

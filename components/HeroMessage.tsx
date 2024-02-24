@@ -5,7 +5,7 @@ import HeroBtn from "./HeroBtn"
 function HeroMessage() {
   return (
     <div className="py-4 sm:py-6 px-6 bg-blue-50 opacity-1 rounded">
-      <h1 className="text-3xl font-bold text-black mb-4 mt-12 max-w-md
+      <h1 className="text-3xl text-black mb-4 mt-12 max-w-md
       md:max-w-lg lg:max-w-xl mx-auto uppercase">
         Experience the{" "}
         <motion.span
