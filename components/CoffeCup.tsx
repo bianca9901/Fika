@@ -20,6 +20,7 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Mesh } from "three";
+import SectionHeading from "./SectionHeading";
 
 function MeshComponent() {
   const fileUrl = "/coffe-cup/scene.gltf";
@@ -39,6 +40,12 @@ function MeshComponent() {
 
 export function CoffeCup() {
   return (
+    <section>
+    <SectionHeading
+        headingText1="Enjoy a complimentary coffee with every order! Because at Fika,"
+        headingText2="we believe every purchase should come with a little extra joy."
+      />
+
     <div className="flex justify-center items-center">
       <Canvas camera={{ position: [100, 100, 0] }}>
         <OrbitControls enablePan={false} enableZoom={false} />
@@ -46,5 +53,6 @@ export function CoffeCup() {
         <MeshComponent />
       </Canvas>
     </div>
+    </section>
   );
 }
