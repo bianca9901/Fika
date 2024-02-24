@@ -1,5 +1,5 @@
 "use client";
-import fikaLogo from "@/public/fika-logo.png";
+import fikaLogo from "@/public/logo-fika.png";
 import Image from "next/image";
 
 function Logo() {
