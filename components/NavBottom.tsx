@@ -25,13 +25,13 @@ export default function NavBottom() {
         {links.map((link) => (
           <motion.li
             className="relative flex gap-10 text-lg font-semibold "
-            key={link.hash}
+            key={link.path}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Link
-            href={link.hash}
+            href={link.path}
             onClick={() => setActiveSection(link.name)}
             aria-label={link.name}
             className={clsx({

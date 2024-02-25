@@ -12,9 +12,9 @@ export default function NavTop() {
     <nav className="hidden sm:flex">
       <ul className="flex gap-10">
       {links.map((link) => (
-        <motion.li className="relative" key={link.hash}>
+        <motion.li className="relative" key={link.path}>
           <Link
-            href={link.hash}
+            href={link.path}
             onClick={() => {
               setActiveSection(link.name)
               setTimeOfLastClick(Date.now())
