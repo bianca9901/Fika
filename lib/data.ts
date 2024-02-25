@@ -46,22 +46,22 @@ export const profileData = [
 export const links = [
     {
       name: "HOME",
-      hash: "#home",
+      path: "/",
       icon: "mdi-light:home"
     },
     {
       name: "MENU",
-      hash: "#menu",
+      path: "/#menu",
       icon: "material-symbols-light:food-bank-outline"
     },
     {
       name: "ABOUT US",
-      hash: "#about-us",
+      path: "/#about-us",
       icon: "fluent:people-team-48-regular"
     },
     {
       name: "CONTACT",
-      hash: "#contact",
+      path: "/#contact",
       icon: "material-symbols-light:contact-phone-outline-sharp"
     },
   ] as const;
