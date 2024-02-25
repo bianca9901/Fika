@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import NavBottom from "@/components/NavBottom";
 import { CartProvider } from "@/context/CartContext";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
+import { Toaster } from "react-hot-toast";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
           <CartProvider>
             <Header />
             {children}
+            <Toaster position="top-right"/>
             <NavBottom />
           </CartProvider>
         </ActiveSectionContextProvider>
