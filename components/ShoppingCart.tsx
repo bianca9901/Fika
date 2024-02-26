@@ -20,11 +20,11 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
     >
       <div
         className="absolute right-0 top-0 h-full w-full max-w-md p-4
-      rounded-lg shadow-lg bg-white overflow-y-auto"
+      rounded-lg shadow-lg bg-white dark:bg-sky-900 dark:text-white overflow-y-auto"
       >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl">Shopping Cart</h2>
-          <button onClick={onClose} className="text-slate-500">
+          <button onClick={onClose} className="text-slate-500 dark:text-white">
             Close
           </button>
         </div>

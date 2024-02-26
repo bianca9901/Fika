@@ -43,7 +43,7 @@ function About() {
             )}
           </div>
         ))}
-        <p className="mt-10">
+        <p className="mt-10 dark:text-white">
           Lorem ipsum dolor sit aentium amet tempore culpa saepe dolorum
           dignissimos Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Velit in laboriosam explicabo repellat sunt accusantium laborum

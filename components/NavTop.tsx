@@ -32,8 +32,8 @@ export default function NavTop() {
                 setTimeOfLastClick(Date.now());
               }}
               className={clsx({
-                "text-gray-700": activeSection !== link.name,
-                "text-black": activeSection === link.name,
+                "text-gray-700 dark:text-white": activeSection !== link.name,
+                "text-black dark:text-white": activeSection === link.name,
               })}
             >
               {link.name}
