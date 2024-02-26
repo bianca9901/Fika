@@ -1,18 +1,25 @@
 "use client";
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import fikaLogo from "@/public/logo-fika.png";
 import Image from "next/image";
 
 function Logo() {
-  const fikaLogoSrc = fikaLogo.src;
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0 });
+    if (pathname === '/order') {
+      router.push('/');
+    } else {
+      window.scrollTo({ top: 0 });
+    }
   };
 
   return (
     <Image
       onClick={handleLogoClick}
-      src={fikaLogoSrc}
+      src={fikaLogo}
       alt="Fika Logo"
       className="mr-11 ml-4"
       width={80}
