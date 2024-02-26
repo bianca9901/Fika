@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
-import AddToCartBtn from "./AddToCartBtn";
 import CartBtnGroup from "./CartBtnGroup";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { fika } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
+import Btn from "./Btn"; 
 
 export default function Menu() {
   const { ref } = useSectionInView("MENU");
@@ -29,7 +29,7 @@ export default function Menu() {
   return (
     <section ref={ref} id="menu" className="scroll-mt-28">
       <SectionHeading
-        headingText1="Only traditional Fika on our"
+        headingText1="Only traditional Fika on our "
         headingText2="Menu"
       />
 
@@ -44,15 +44,15 @@ export default function Menu() {
             key={item.id}
             className="mb-6 border border-gray-300 rounded-lg p-4"
           >
-            <h2 className="text-xl mb-2 uppercase">{item.title}</h2>
-            <p className="text-blue-600 mb-2">
+            <h2 className="text-xl mb-2 uppercase text-white">{item.title}</h2>
+            <p className="text-yellow-300 mb-2">
               {formatCurrency(item.price)}
             </p>
             <div className="flex mb-2">
               {item.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-blue-200 text-gray-700 px-2 py-1
+                  className="bg-sky-500 text-gray-700 px-2 py-1
                   rounded-full text-sm mr-2"
                 >
                   {tag}
@@ -79,22 +79,24 @@ export default function Menu() {
                 increaseCartQuantity={() => increaseQuantity(item.id)}
                 removeFromCart={() => removeFromCart(item.id)}
               />
-            ) : (
-              <AddToCartBtn
-                onClick={() =>
-                  addToCart({
-                    id: item.id,
-                    quantity: 1,
-                    title: item.title,
-                    price: item.price,
-                    image: item.image.src,
-                  })
-                }
-              />
-            )}
-          </div>
-        ))}
-      </motion.div>
-    </section>
-  );
-}
+              ) : (
+                <Btn
+                  onClick={() =>
+                    addToCart({
+                      id: item.id,
+                      quantity: 1,
+                      title: item.title,
+                      price: item.price,
+                      image: item.image.src,
+                    })
+                  }
+                >
+                  ADD TO CART +
+                </Btn>
+              )}
+            </div>
+          ))}
+        </motion.div>
+      </section>
+    );
+  }

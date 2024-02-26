@@ -4,6 +4,7 @@ import Image from "next/image";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Btn from "./Btn"; 
 
 type ShoppingCartProps = {
   onClose: () => void;
@@ -57,16 +58,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
           <div className="mt-4">
             <p className="text-lg">Total Sum: {formatCurrency(totalSum)}</p>
             <Link href="/order">
-              <motion.button
-                onClick={onClose}
-                whileHover={{ scale: 1.05, backgroundColor: "#FFD700" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-yellow-300 focus:outline-none focus:ring-2
-             focus:ring-yellow-400 focus:ring-opacity-50 text-black py-1 px-6
-             rounded shadow-md"
-              >
-                PLACE ORDER
-              </motion.button>
+              <Btn onClick={onClose}>PLACE ORDER</Btn>
             </Link>
           </div>
         )}
