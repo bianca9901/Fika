@@ -7,6 +7,7 @@ import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import ThemeToggle from "@/components/ThemeToggle";
 import ThemeContextProvider from "@/context/ThemeContext";
+import Footer from "@/components/Footer";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
             {children} 
             <ThemeToggle/>
             <NavBottom />
+            <Footer/>
           </CartProvider>
         </ActiveSectionContextProvider>
         </ThemeContextProvider>
