@@ -5,6 +5,8 @@ import NavBottom from "@/components/NavBottom";
 import { CartProvider } from "@/context/CartContext";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
+import ThemeToggle from "@/components/ThemeToggle";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -25,17 +27,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${quicksand.className} bg-sky-400 relative
+        className={`${quicksand.className} bg-sky-400 relative dark:bg-black
         `}
       >
+        <ThemeContextProvider>
         <ActiveSectionContextProvider>
           <CartProvider>
             <Header />
-            {children}
             <Toaster position="top-right"/>
+            {children} 
+            <ThemeToggle/>
             <NavBottom />
           </CartProvider>
         </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
