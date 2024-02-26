@@ -4,19 +4,14 @@ import Image from "next/image";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Btn from "./Btn"; 
+import Btn from "./Btn";
 
 type ShoppingCartProps = {
   onClose: () => void;
 };
 
 function ShoppingCart({ onClose }: ShoppingCartProps) {
-  const { cartItems } = useCart();
-
-  const totalSum = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  const { cartItems, totalSum } = useCart();
 
   return (
     <div
@@ -56,7 +51,7 @@ function ShoppingCart({ onClose }: ShoppingCartProps) {
         )}
         {cartItems.length > 0 && (
           <div className="mt-4">
-            <p className="text-lg">Total Sum: {formatCurrency(totalSum)}</p>
+            <p className="text-lg">Total Sum: {formatCurrency(totalSum())}</p>
             <Link href="/order">
               <Btn onClick={onClose}>PLACE ORDER</Btn>
             </Link>

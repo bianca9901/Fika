@@ -23,6 +23,7 @@ type CartContextType = {
   removeFromCart: (id: number) => void;
   increaseQuantity: (id: number) => void;
   decreaseQuantity: (id: number) => void;
+  totalSum: () => number;
 };
 
 // Props of the CartProvider component
@@ -112,6 +113,11 @@ export function CartProvider({ children }: CartProviderProps) {
     updateLocalStorage(updatedCartItems);
   };
 
+  // Function to calculate the total sum of all items in the cart
+  const calculateTotalSum = () => {
+    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  };
+
   // Provide the cart context value to the children components
   return (
     <CartContext.Provider
@@ -121,6 +127,7 @@ export function CartProvider({ children }: CartProviderProps) {
         removeFromCart,
         increaseQuantity,
         decreaseQuantity,
+        totalSum: calculateTotalSum,
       }}
     >
       {children}
