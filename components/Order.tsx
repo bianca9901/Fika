@@ -4,7 +4,7 @@ import React from "react";
 import OrderText from "./OrderText";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { SendEmail } from "@/actions/sendEmail";
+import { SendEmail } from "@/actions/SendEmail";
 
 export default function Order() {
   return (
