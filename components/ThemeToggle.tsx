@@ -11,7 +11,8 @@ export default function ThemeToggle() {
       className="fixed bottom-20 md:bottom-5 right-4 bg-white md:w-[3rem]
       md:h-[3rem] w-[2rem] h-[2rem] bg-opacity-80 border border-white
     border-opacity-40 shadow-2xl rounded-full flex items-center
-    justify-center hover:scale-[1.15] active:scale-105 transition-all"
+    justify-center hover:scale-[1.15] active:scale-105 transition-all
+    cursor-pointer"
       onClick={toggleTheme}
     >
       {theme === "light" ? (

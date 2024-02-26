@@ -21,7 +21,7 @@ function Logo() {
       onClick={handleLogoClick}
       src={fikaLogo}
       alt="Fika Logo"
-      className="mr-11 ml-4"
+      className="mr-11 ml-4 cursor-pointer"
       width={80}
       height={80}
       quality={70}
