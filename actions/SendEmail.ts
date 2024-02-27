@@ -10,6 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const SendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
+  const orderSummary = formData.get("orderSummary")
 
   // Server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -20,6 +21,11 @@ export const SendEmail = async (formData: FormData) => {
   if (!validateString(message, 5000)) {
     return {
       error: "Invalid message",
+    };
+  }
+  if (!validateString(orderSummary, 500)) {
+    return {
+      error: "Invalid order",
     };
   }
 
@@ -33,6 +39,7 @@ export const SendEmail = async (formData: FormData) => {
       react: React.createElement(OrderFormEmail, {
         message: message,
         senderEmail: senderEmail,
+        orderSummary: orderSummary
       }),
     });
   } catch (error: unknown) {
