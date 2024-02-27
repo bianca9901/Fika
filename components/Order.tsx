@@ -8,11 +8,8 @@ import { SendEmail } from "@/actions/SendEmail";
 import { useCart } from "@/context/CartContext";
 
 export default function Order() {
-  const { cartItems } = useCart();
+  const { cartItems, formattedCartItems } = useCart();
 
-  const formattedCartItems = cartItems
-    .map((item) => `${item.quantity}x ${item.title}`)
-    .join(", ");
 
     const handleOrderSummaryClick = () => {
       toast("To make changes to your order, please return to the menu.", {
