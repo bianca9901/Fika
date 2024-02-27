@@ -15,11 +15,13 @@ import { Tailwind } from "@react-email/tailwind";
 type OrderFormEmailProps = {
   message: string;
   senderEmail: string;
+  orderSummary: string
 };
 
 export default function OrderFormEmail({
   message,
   senderEmail,
+  orderSummary,
 }: OrderFormEmailProps) {
   return (
     <Html>
@@ -33,6 +35,7 @@ export default function OrderFormEmail({
                 You have received a new order! Here are the details:
               </Heading>
               <Text className="mb-4">{message}</Text>
+              <Text className="mb-4">{orderSummary}</Text>
               <Hr className="border-t border-gray-300 mb-4" />
               <Text className="text-sm">
                 The senders email address: {senderEmail}
