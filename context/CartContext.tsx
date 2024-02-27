@@ -24,6 +24,8 @@ type CartContextType = {
   increaseQuantity: (id: number) => void;
   decreaseQuantity: (id: number) => void;
   totalSum: () => number;
+  formattedCartItems: string;
+  
 };
 
 // Props of the CartProvider component
@@ -118,6 +120,11 @@ export function CartProvider({ children }: CartProviderProps) {
     return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   };
 
+  // Formats the cart items into a user-friendly string representing each item's quantity and title
+  const formattedCartItems = cartItems
+  .map((item) => `${item.quantity}x ${item.title}`)
+  .join(", ");
+
   // Provide the cart context value to the children components
   return (
     <CartContext.Provider
@@ -128,6 +135,7 @@ export function CartProvider({ children }: CartProviderProps) {
         increaseQuantity,
         decreaseQuantity,
         totalSum: calculateTotalSum,
+        formattedCartItems
       }}
     >
       {children}
