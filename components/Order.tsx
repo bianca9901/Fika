@@ -5,8 +5,21 @@ import OrderText from "./OrderText";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { SendEmail } from "@/actions/SendEmail";
+import { useCart } from "@/context/CartContext";
 
 export default function Order() {
+  const { cartItems } = useCart();
+
+  const formattedCartItems = cartItems
+    .map((item) => `${item.quantity}x ${item.title}`)
+    .join(", ");
+
+    const handleOrderSummaryClick = () => {
+      toast("To make changes to your order, please return to the menu.", {
+        icon: "ℹ️",
+      });
+    };
+
   return (
     <section className="mt-40 mb-40">
       <OrderText />
@@ -28,6 +41,13 @@ export default function Order() {
           required
           maxLength={500}
           placeholder="Your email"
+        />
+        <textarea
+          className="h-20 my-3 rounded-lg border-black/10 p-4 bg-sky-300"
+          name="orderSummary"
+          value={`I am ordering: ${formattedCartItems}`}
+          onClick={handleOrderSummaryClick}
+          readOnly
         />
         <textarea
           className="h-52 my-3 rounded-lg border-black/10 p-4"
