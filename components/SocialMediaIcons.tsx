@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from "@iconify/react";
 import Link from 'next/link'
 
-function HeroFollowUs() {
+function SocialMediaIcons() {
   return (
     <div>
       <Link href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -27,4 +27,4 @@ function HeroFollowUs() {
   );
 }
 
-export default HeroFollowUs;
+export default SocialMediaIcons;
