@@ -42,7 +42,7 @@ export default function Order() {
           placeholder="Your email"
         />
         <textarea
-          className="h-20 my-3 rounded-lg border-black/10 p-4 bg-sky-300"
+          className="h-20 my-3 rounded-lg border-black/10 p-4 bg-sky-300 dark:bg-black dark:text-gray-300"
           name="orderSummary"
           value={`I am ordering: ${formattedCartItems}`}
           onClick={handleOrderSummaryClick}

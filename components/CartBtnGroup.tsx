@@ -15,7 +15,7 @@ function CartBtnGroup({
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-2">
             <button
-              className="bg-yellow-300 hover:bg-yellow-400 text-black px-2
+              className="bg-yellow-300 hover:bg-yellow-400 text-black px-3
               py-1 rounded-md text-sm"
               onClick={decreaseCartQuantity}
             >
@@ -23,7 +23,7 @@ function CartBtnGroup({
             </button>
             <div className="text-sm">{quantity} in cart</div>
             <button
-              className="bg-yellow-300 hover:bg-yellow-400 text-black px-2
+              className="bg-yellow-300 hover:bg-yellow-400 text-black px-3
               py-1 rounded-md text-sm"
               onClick={increaseCartQuantity}
             >
