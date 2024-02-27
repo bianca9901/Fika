@@ -2,7 +2,7 @@
 import HeroMessage from "./HeroMessage";
 import { useSectionInView } from "@/lib/hooks";
 import HeroImg from "./HeroImg";
-import HeroFollowUs from "./HeroFollowUs";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 function HeroSection() {
   const { ref } = useSectionInView("HOME")
@@ -17,7 +17,7 @@ function HeroSection() {
       >
         <HeroMessage />
         <HeroImg/>
-        <HeroFollowUs/>
+        <SocialMediaIcons/>
       </div>
     </div>
     </section>
