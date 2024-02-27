@@ -9,7 +9,7 @@ function OrderConfirmation() {
   const { formattedCartItems, totalSum } = useCart();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen dark:text-white">
       <div className="mt-[7.2rem] text-center">
         <SectionHeading
           headingText1="Hooray!"
