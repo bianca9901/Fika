@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="mt-10 mb-10 px-4 text-center text-white">
+    <footer className="mt-10 mb-[5rem] md:mb-10 px-4 text-center text-white">
       <small className="mb-2 block text-xs">
         &copy; 2024 Bianca. All Rights Reserved.
       </small>
