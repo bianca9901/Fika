@@ -1,10 +1,13 @@
-import OrderConfirmation from '@/components/OrderConfirmation'
 import React from 'react'
+import OrderConfirmation from '@/components/OrderConfirmation'
+import ContainerMaxWidth from '@/components/ContainerMaxWidth'
 
 export default function OrderConfirmationPage() {
   return (
     <main>
-         <OrderConfirmation/>
+      <ContainerMaxWidth>
+        <OrderConfirmation/>
+      </ContainerMaxWidth>     
     </main>
   )
 }
