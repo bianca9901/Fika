@@ -5,7 +5,7 @@ function OpenTimes() {
   return (
     <section id="open-times" className="scroll-mt-28">
       <div className="bg-sky-500 dark:bg-black p-6 rounded-lg shadow-md">
-        <div className="md:text-center">
+        <div>
           <SectionHeading headingText1="Open " headingText2="times" />
         </div>
         <div className="grid md:grid-cols-2 gap-4">
