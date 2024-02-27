@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { SendEmail } from "@/actions/SendEmail";
 import { useCart } from "@/context/CartContext";
+import { redirect } from 'next/navigation'
 
 export default function Order() {
-  const { cartItems, formattedCartItems } = useCart();
+  const { formattedCartItems } = useCart();
 
 
     const handleOrderSummaryClick = () => {
@@ -28,7 +29,8 @@ export default function Order() {
             toast.error(error);
             return;
           }
-          toast.success("Email sent successfully");
+          toast.success("Order sent successfully");
+          redirect('/orderConfirmation');
         }}
       >
         <input
