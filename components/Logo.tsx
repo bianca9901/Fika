@@ -9,7 +9,7 @@ function Logo() {
   const router = useRouter();
 
   const handleLogoClick = () => {
-    if (pathname === '/order') {
+    if (pathname !== '/') {
       router.push('/');
     } else {
       window.scrollTo({ top: 0 });
