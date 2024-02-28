@@ -25,7 +25,7 @@ type CartContextType = {
   decreaseQuantity: (id: number) => void;
   totalSum: () => number;
   formattedCartItems: string;
-  
+  clearCart: () => void;
 };
 
 // Props of the CartProvider component
@@ -122,8 +122,14 @@ export function CartProvider({ children }: CartProviderProps) {
 
   // Formats the cart items into a user-friendly string representing each item's quantity and title
   const formattedCartItems = cartItems
-  .map((item) => `${item.quantity}x ${item.title}`)
-  .join(", ");
+    .map((item) => `${item.quantity}x ${item.title}`)
+    .join(", ");
+
+  // Function to clear the cart
+  const clearCart = () => {
+    setCartItems([]);
+    updateLocalStorage([]); // Clear localStorage as well
+  };
 
   // Provide the cart context value to the children components
   return (
@@ -135,7 +141,8 @@ export function CartProvider({ children }: CartProviderProps) {
         increaseQuantity,
         decreaseQuantity,
         totalSum: calculateTotalSum,
-        formattedCartItems
+        formattedCartItems,
+        clearCart,
       }}
     >
       {children}
