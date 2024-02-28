@@ -1,9 +1,15 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type SocialMediaIconsProps = {
   iconClassName: string;
+};
+
+const scaleVariants = {
+  whileHover: { scale: 1.1 },
+  whileTap: { scale: 0.95 },
 };
 
 function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
@@ -15,7 +21,13 @@ function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
         rel="noopener"
         aria-label="Instagram"
       >
-        <Icon icon="arcticons:instagram" className={iconClassName} />
+        <motion.div
+          variants={scaleVariants}
+          whileHover="whileHover"
+          whileTap="whileTap"
+        >
+          <Icon icon="arcticons:instagram" className={iconClassName} />
+        </motion.div>
       </Link>
       <Link
         href="https://www.facebook.com/"
@@ -23,7 +35,13 @@ function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
         rel="noopener"
         aria-label="Facebook"
       >
-        <Icon icon="arcticons:facebook" className={iconClassName} />
+        <motion.div
+          variants={scaleVariants}
+          whileHover="whileHover"
+          whileTap="whileTap"
+        >
+          <Icon icon="arcticons:facebook" className={iconClassName} />
+        </motion.div>
       </Link>
       <Link
         href="https://www.linkedin.com/"
@@ -31,7 +49,13 @@ function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
         rel="noopener"
         aria-label="Linkedin"
       >
-        <Icon icon="arcticons:linkedin" className={iconClassName} />
+        <motion.div
+          variants={scaleVariants}
+          whileHover="whileHover"
+          whileTap="whileTap"
+        >
+          <Icon icon="arcticons:linkedin" className={iconClassName} />
+        </motion.div>
       </Link>
     </>
   );
