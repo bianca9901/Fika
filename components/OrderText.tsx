@@ -3,9 +3,10 @@ import { Icon } from "@iconify/react";
 import SectionHeading from "./SectionHeading";
 import { useCart } from "@/context/CartContext";
 import { formatCurrency } from "@/lib/formatCurrency";
+import CartItems from "./CartItems";
 
 function OrderText() {
-  const { totalSum, formattedCartItems } = useCart();
+  const { totalSum } = useCart();
 
   return (
     <>
@@ -20,8 +21,10 @@ function OrderText() {
             <Icon icon="ic:round-shopping-cart" className="w-6 h-6 mr-2" />
             <p className="font-semibold text-xl">Order Details:</p>
           </div>
-          <p>{formattedCartItems}</p>
-          <p className="flex justify-center mt-40">
+          <div>
+            <CartItems />
+          </div>
+          <p className="flex justify-center mt-20">
             <span className="font-bold">Total Sum: </span>&nbsp;
             <span className="text-black">{formatCurrency(totalSum())}</span>
           </p>
