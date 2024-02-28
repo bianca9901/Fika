@@ -6,7 +6,9 @@ import { useCart } from "@/context/CartContext";
 import { formatCurrency } from "@/lib/formatCurrency";
 
 function OrderConfirmation() {
-  const { formattedCartItems, totalSum } = useCart();
+  const { formattedCartItems, totalSum, clearCart } = useCart();
+
+  clearCart()
 
   return (
     <div className="flex flex-col items-center justify-center h-screen dark:text-white">
