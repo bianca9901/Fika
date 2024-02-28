@@ -8,7 +8,7 @@ type SocialMediaIconsProps = {
 
 function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
   return (
-    <div>
+    <>
       <Link
         href="https://www.instagram.com/"
         target="_blank"
@@ -33,7 +33,7 @@ function SocialMediaIcons({ iconClassName }: SocialMediaIconsProps) {
       >
         <Icon icon="arcticons:linkedin" className={iconClassName} />
       </Link>
-    </div>
+    </>
   );
 }
 
