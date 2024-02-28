@@ -53,6 +53,8 @@ function Contact() {
             <Link
               href="https://maps.app.goo.gl/v3XE3acKRADmDLxp7"
               className="text-white hover:underline cursor-pointer"
+              target="_blank"
+              rel="noopener"
             >
               Open in Google Maps
             </Link>
