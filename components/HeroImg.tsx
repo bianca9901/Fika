@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function HeroImg() {
   return (
-    <div>
+    <div className='hidden sm:flex'>
     <Image
         src={heroimg}
         alt="cinnamun bun roll"
