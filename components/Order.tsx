@@ -49,6 +49,7 @@ export default function Order() {
           value={`I am ordering: ${formattedCartItems}`}
           onClick={handleOrderSummaryClick}
           readOnly
+          aria-label={`Your order is ${formattedCartItems}`}
         />
         <textarea
           className="h-52 my-3 rounded-lg border-black/10 p-4"
