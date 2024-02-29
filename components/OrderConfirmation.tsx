@@ -5,15 +5,16 @@ import Confetti from "./Confetti";
 import { useCart } from "@/context/CartContext";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { redirect } from 'next/navigation'
+import { useOrderContext } from '@/context/OrderContext';
 
 function OrderConfirmation() {
   const { formattedCartItems, totalSum, clearCart } = useCart();
   const [savedCartItems, setSavedCartItems] = useState<string>("");
   const [savedTotalSum, setSavedTotalSum] = useState<number>(0);
+  const { isOrderPlaced } = useOrderContext();
 
   useEffect(() => {
-    const orderPlaced = localStorage.getItem('orderPlaced');
-    if (!orderPlaced) {
+    if (!isOrderPlaced) {
       redirect('/');
     }
     // Save the cart items and total sum before clearing the cart
