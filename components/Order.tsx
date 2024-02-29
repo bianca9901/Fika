@@ -30,6 +30,7 @@ export default function Order() {
             return;
           }
           toast.success("Order sent successfully");
+          localStorage.setItem('orderPlaced', 'true');
           redirect('/orderConfirmation');
         }}
       >
