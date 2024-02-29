@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "./SectionHeading";
 import Confetti from "./Confetti";
 import { useCart } from "@/context/CartContext";
@@ -8,7 +8,11 @@ import { formatCurrency } from "@/lib/formatCurrency";
 function OrderConfirmation() {
   const { formattedCartItems, totalSum, clearCart } = useCart();
 
-  clearCart()
+  useEffect(() => {
+    // Clear the cart when the component mounts
+    clearCart();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen dark:text-white">
