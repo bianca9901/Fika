@@ -52,7 +52,7 @@ export default function Menu() {
               {item.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-sky-500 dark:bg-sky-900 dark:text-white text-gray-700 px-2 py-1
+                  className="bg-sky-500 dark:bg-sky-900 text-white px-2 py-1
                   rounded-full text-sm mr-2"
                 >
                   {tag}
