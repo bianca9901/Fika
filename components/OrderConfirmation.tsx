@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import Confetti from "./Confetti";
 import { useCart } from "@/context/CartContext";
@@ -7,8 +7,14 @@ import { formatCurrency } from "@/lib/formatCurrency";
 
 function OrderConfirmation() {
   const { formattedCartItems, totalSum, clearCart } = useCart();
+  const [savedCartItems, setSavedCartItems] = useState<string>("");
+  const [savedTotalSum, setSavedTotalSum] = useState<number>(0);
 
   useEffect(() => {
+    // Save the cart items and total sum before clearing the cart
+    setSavedCartItems(formattedCartItems);
+    setSavedTotalSum(totalSum());
+
     // Clear the cart when the component mounts
     clearCart();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -29,8 +35,8 @@ function OrderConfirmation() {
           enjoy your purchase!
         </p>
         <p className="mt-10 font-bold">Order Details:</p>
-        <p>{formattedCartItems}</p>
-        <p className="">Total Sum: {formatCurrency(totalSum())}</p>
+        <p>{savedCartItems}</p>
+        <p className="">Total Sum: {formatCurrency(savedTotalSum)}</p>
       </div>
       <Confetti />
     </div>
