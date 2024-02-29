@@ -18,7 +18,7 @@ function HeroSection() {
         <HeroMessage />
         <HeroImg/>
         <div>
-           <SocialMediaIcons iconClassName="w-8 md:w-[5rem] h-auto text-white mr-4 ml-11" />
+           <SocialMediaIcons iconClassName="w-8 md:w-[5rem] h-auto text-white mr-4 ml-11 mb-[2rem]" />
         </div>
        
       </div>
