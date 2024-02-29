@@ -4,6 +4,7 @@ import SectionHeading from "./SectionHeading";
 import Confetti from "./Confetti";
 import { useCart } from "@/context/CartContext";
 import { formatCurrency } from "@/lib/formatCurrency";
+import { redirect } from 'next/navigation'
 
 function OrderConfirmation() {
   const { formattedCartItems, totalSum, clearCart } = useCart();
@@ -11,6 +12,10 @@ function OrderConfirmation() {
   const [savedTotalSum, setSavedTotalSum] = useState<number>(0);
 
   useEffect(() => {
+    const orderPlaced = localStorage.getItem('orderPlaced');
+    if (!orderPlaced) {
+      redirect('/');
+    }
     // Save the cart items and total sum before clearing the cart
     setSavedCartItems(formattedCartItems);
     setSavedTotalSum(totalSum());
