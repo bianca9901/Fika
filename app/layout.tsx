@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import ThemeToggle from "@/components/ThemeToggle";
 import ThemeContextProvider from "@/context/ThemeContext";
 import Footer from "@/components/Footer";
+import { OrderProvider } from "@/context/OrderContext";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
         `}
       >
         <ThemeContextProvider>
+        <OrderProvider>
         <ActiveSectionContextProvider>
           <CartProvider>
             <Header />
@@ -42,6 +44,7 @@ export default function RootLayout({
             <Footer/>
           </CartProvider>
         </ActiveSectionContextProvider>
+        </OrderProvider>
         </ThemeContextProvider>
       </body>
     </html>
