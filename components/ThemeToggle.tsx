@@ -13,6 +13,7 @@ export default function ThemeToggle() {
     border-opacity-40 shadow-2xl rounded-full flex items-center
     justify-center hover:scale-[1.15] active:scale-105 transition-all
     cursor-pointer"
+      aria-label="Switch Theme"
       onClick={toggleTheme}
     >
       {theme === "light" ? (
