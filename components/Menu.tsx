@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import CartBtnGroup from "./CartBtnGroup";
@@ -8,16 +7,11 @@ import { formatCurrency } from "@/lib/formatCurrency";
 import { fika } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
-import Btn from "./Btn"; 
+import Btn from "./Btn";
 
 export default function Menu() {
   const { ref } = useSectionInView("MENU");
 
-  //const { scrollYProgress } = useScroll({
-  //target: useRef<HTMLDivElement>(null),
-  //offset: ['0 1', '1.33 1'],
-  //});
-  //const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const {
     cartItems,
     addToCart,
@@ -33,9 +27,7 @@ export default function Menu() {
         headingText2="Menu"
       />
 
-      <motion.div
-        //ref={ref}
-        //style={{ scale: scaleProgress }}
+      <div
         className="py-4 sm:py-6 px-6 w-full max-w-screen-xl flex flex-wrap
         gap-10 justify-center"
       >
@@ -45,21 +37,22 @@ export default function Menu() {
             className="mb-6 border border-gray-300 rounded-lg p-4"
           >
             <h2 className="text-xl mb-2 uppercase text-white">{item.title}</h2>
-            <p className="text-yellow-300 mb-2">
-              {formatCurrency(item.price)}
-            </p>
+            <p className="text-yellow-300 mb-2">{formatCurrency(item.price)}</p>
             <div className="flex mb-2">
               {item.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-sky-500 dark:bg-sky-900 text-white px-2 py-1
-                  rounded-full text-sm mr-2"
+                  className="bg-sky-500 dark:bg-sky-900 text-white px-2
+                  py-1 rounded-full text-sm mr-2"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            <div className="relative flex justify-center items-center mx-auto mb-4 rounded-full shadow-image">
+            <div
+              className="relative flex justify-center items-center mx-auto
+            mb-4 rounded-full shadow-image"
+            >
               <Image
                 src={item.image}
                 alt={item.title}
@@ -79,24 +72,24 @@ export default function Menu() {
                 increaseCartQuantity={() => increaseQuantity(item.id)}
                 removeFromCart={() => removeFromCart(item.id)}
               />
-              ) : (
-                <Btn
-                  onClick={() =>
-                    addToCart({
-                      id: item.id,
-                      quantity: 1,
-                      title: item.title,
-                      price: item.price,
-                      image: item.image.src,
-                    })
-                  }
-                >
-                  ADD TO CART +
-                </Btn>
-              )}
-            </div>
-          ))}
-        </motion.div>
-      </section>
-    );
-  }
+            ) : (
+              <Btn
+                onClick={() =>
+                  addToCart({
+                    id: item.id,
+                    quantity: 1,
+                    title: item.title,
+                    price: item.price,
+                    image: item.image.src,
+                  })
+                }
+              >
+                ADD TO CART +
+              </Btn>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
