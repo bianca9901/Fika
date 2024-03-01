@@ -4,6 +4,13 @@ import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
+/**
+ * useSectioninView is a Custom hook to detect if a section is in view based on
+ * the provided threshold.
+ * - It uses the react-intersection-observer library.
+ * - This hook updates the active section in the context when the section comes
+ * into view, ensuring a delay of 1 second after the last click event.
+ **/
 export function useSectionInView(sectionName: SectionName, threshold = 0.2) {
   const { ref, inView } = useInView({
     threshold,
@@ -21,7 +28,12 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.2) {
   };
 }
 
-export function useScrollDirection () {
+/**
+ * useScrollDirection is a custom hook to detect the scroll direction.
+ * - It tracks the window scroll position and updates the scroll direction state
+ * accordingly.
+ **/
+export function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState("none");
 
   useEffect(() => {
@@ -45,4 +57,4 @@ export function useScrollDirection () {
   }, []);
 
   return scrollDirection;
-};
+}
