@@ -4,7 +4,7 @@ import { useSectionInView } from "@/lib/hooks";
 import Btn from "./Btn";
 import Link from "next/link";
 import Image from "next/image";
-import heroimg from "@/public/headerimg.png";
+import heroimg from "@/public/hero-img-bulle.png";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 function Hero() {

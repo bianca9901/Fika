@@ -7,7 +7,7 @@
  * - Opening hours for each day of the week.
  */
 
-import bulle from "../public/big-bulle.png";
+import bulle from "../public/bulle.png";
 import chockladboll from "../public/chocklad-boll.png";
 import semla from "../public/semla.png";
 import kladdkaka from "../public/kladdkaka.png";
