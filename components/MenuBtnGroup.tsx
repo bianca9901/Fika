@@ -1,16 +1,16 @@
-type CartBtnGroupProps = {
+type MenuBtnGroupProps = {
     quantity: number;
     decreaseCartQuantity: () => void;
     increaseCartQuantity: () => void;
     removeFromCart: () => void;
   }
   
-function CartBtnGroup({
+function MenuBtnGroup({
   quantity,
   decreaseCartQuantity,
   increaseCartQuantity,
   removeFromCart,
-}: CartBtnGroupProps) {
+}: MenuBtnGroupProps) {
     return (
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-2">
@@ -41,4 +41,4 @@ function CartBtnGroup({
       );
     }
 
-export default CartBtnGroup;
+export default MenuBtnGroup;
