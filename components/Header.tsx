@@ -1,6 +1,6 @@
 import NavTop from "./NavTop";
 import Logo from "./Logo";
-import Cart from "./Cart";
+import CartIcon from "./CartIcon";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex-grow" />
         <NavTop />
         <div className="flex-grow" />
-        <Cart />
+        <CartIcon />
       </div>
     </header>
   );
