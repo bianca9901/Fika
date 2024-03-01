@@ -1,4 +1,3 @@
-"use client";
 import { useCart } from "@/context/CartContext";
 import { formatCurrency } from "@/lib/formatCurrency";
 import Link from "next/link";
