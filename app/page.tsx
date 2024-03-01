@@ -1,5 +1,5 @@
 import Menu from "@/components/Menu";
-import HeroSection from "@/components/HeroSection";
+import Hero from "@/components/Hero";
 import OpenTimes from "@/components/OpenTimes";
 import About from "@/components/About";
 import SectionDivider from "@/components/SectionDivider";
@@ -11,7 +11,7 @@ import { CoffeCup } from "@/components/CoffeCup";
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      <Hero />
       <CustomShapeDividerBottom />
       <ContainerMaxWidth>
         <CoffeCup />
