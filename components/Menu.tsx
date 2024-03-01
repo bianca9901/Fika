@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
-import CartBtnGroup from "./CartBtnGroup";
+import MenuBtnGroup from "./MenuBtnGroup";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { fika } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
@@ -63,7 +63,7 @@ export default function Menu() {
             </div>
 
             {cartItems.find((cartItem) => cartItem.id === item.id) ? (
-              <CartBtnGroup
+              <MenuBtnGroup
                 quantity={
                   cartItems.find((cartItem) => cartItem.id === item.id)
                     ?.quantity || 0
