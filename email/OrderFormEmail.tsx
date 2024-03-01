@@ -1,3 +1,7 @@
+/**
+ * OrderFormEmail represents the email template for
+ * notifying about a new order received.
+ */
 import React from "react";
 import {
   Html,
@@ -15,7 +19,7 @@ import { Tailwind } from "@react-email/tailwind";
 type OrderFormEmailProps = {
   message: string;
   senderEmail: string;
-  orderSummary: string
+  orderSummary: string;
 };
 
 export default function OrderFormEmail({
