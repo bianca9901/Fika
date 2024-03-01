@@ -10,7 +10,7 @@ import { useSectionInView } from "@/lib/hooks";
 import Btn from "./Btn";
 
 export default function Menu() {
-  const { ref } = useSectionInView("MENU");
+  const { ref } = useSectionInView("MENU", 0.1);
 
   const {
     cartItems,
