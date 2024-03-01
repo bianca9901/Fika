@@ -46,7 +46,7 @@ export function CoffeCup() {
         headingText2="we believe every purchase should come with a little extra joy."
       />
 
-    <div className="flex justify-center items-center">
+    <div className="justify-center items-center hidden sm:flex">
       <Canvas camera={{ position: [100, 100, 0] }}>
         <OrbitControls enablePan={false} enableZoom={false} />
         <ambientLight />
