@@ -36,11 +36,11 @@ These images were sourced from [Canva:](https://www.canva.com/)
 - [profile4.png](https://www.canva.com/photos/MAEMVzdhOWY/) by fizkes
 - [profile5.png](https://www.canva.com/photos/MAEHvVwd5Dw/) by rubensky15
 - [profile6.png](https://www.canva.com/photos/MADdwn9yn4Y/) by Rido
-- [profile7.png](https://www.canva.com/photos/MADarGmvW0Y/) by NADOFOTOS from Getty Images Pro
+- [profile7.png](https://www.canva.com/photos/MADarGmvW0Y/) by NADOFOTOS
 - [kladdkaka.png](https://www.canva.com/photos/MABMXls1wWY/) by Danny Smythe
 - [semla.png](https://www.canva.com/photos/MAE0-ydBtwI/) by Iuliia Nedrygailova's Images
-- [big-bulle.png](https://www.canva.com/photos/MADFFMlcknU/) by exopixel from Getty Images
-- [headerimg.png](https://www.canva.com/photos/MAFDtHJUsUc/) by grafvision from Getty Images
+- [big-bulle.png](https://www.canva.com/photos/MADFFMlcknU/) by exopixel
+- [headerimg.png](https://www.canva.com/photos/MAFDtHJUsUc/) by grafvision
 
 This image was sourced from [CleanPNG:](https://www.cleanpng.com/)
 
