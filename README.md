@@ -2,6 +2,24 @@
 
 Welcome to FIKA! This is a web application for an imaginary cafe, with traditional Swedish pastries on the menu!
 
+## Features
+
+**Browse Menu**: Explore a variety of traditional Swedish pastries available on the menu.
+
+**Add to Cart**: Conveniently add pastries to your shopping cart for easy ordering.
+
+**Seamless Ordering Experience**: Enjoy a seamless ordering experience with a user-friendly interface.
+
+**Learn About Workers**: Discover more about the workers at Fika by hovering over their images in the About section.
+
+**Contact Information**: Find contact information for the cafe and its location in the Contact section for easy communication and locating the cafe.
+
+**Opening Times**: Check out the opening times to plan your visit according to your convenience.
+
+**Theme Toggle**: Choose between Dark and Light themes for personalized browsing experience.
+
+**Interactive 3D Animation**: Experience a cool and interactive 3D animation for added visual appeal.
+
 ## Design
 
 The color scheme chosen for the project predominantly features blue and yellow hues. Inspired by the colors of the Swedish flag, these shades evoke a sense of vibrancy and connection to Swedish culture.
