@@ -11,12 +11,12 @@ function OrderConfirmation() {
   const { formattedCartItems, totalSum, clearCart } = useCart();
   const [savedCartItems, setSavedCartItems] = useState<string>("");
   const [savedTotalSum, setSavedTotalSum] = useState<number>(0);
-  const { isOrderPlaced } = useOrderContext();
+  //const { isOrderPlaced } = useOrderContext();
 
   useEffect(() => {
-    if (!isOrderPlaced) {
-      redirect('/');
-    }
+    //if (!isOrderPlaced) {
+      //redirect('/');
+    //}
     // Save the cart items and total sum before clearing the cart
     setSavedCartItems(formattedCartItems);
     setSavedTotalSum(totalSum());

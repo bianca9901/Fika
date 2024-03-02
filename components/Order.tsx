@@ -11,7 +11,7 @@ import { useOrderContext } from '@/context/OrderContext';
 
 export default function Order() {
   const { formattedCartItems } = useCart();
-  const { markOrderPlaced } = useOrderContext();
+  //const { markOrderPlaced } = useOrderContext();
 
     const handleOrderSummaryClick = () => {
       toast("To make changes to your order, please return to the menu.", {
@@ -31,7 +31,7 @@ export default function Order() {
             return;
           }
           toast.success("Order sent successfully");
-          markOrderPlaced();
+          //markOrderPlaced();
           redirect('/orderConfirmation');
         }}
       >

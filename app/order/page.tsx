@@ -6,11 +6,11 @@ import { redirect } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 
 export default function OrderPage() {
-  const { cartItems } = useCart();
+  //const { cartItems } = useCart();
 
-  if (cartItems.length === 0) {
-    redirect('/'); // Redirects to home page if cart is empty
-  }
+  //if (cartItems.length === 0) {
+    //redirect('/'); // Redirects to home page if cart is empty
+  //}
   return (
     <main>
       <ContainerMaxWidth>
