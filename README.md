@@ -39,8 +39,8 @@ These images were sourced from [Canva:](https://www.canva.com/)
 - [profile7.png](https://www.canva.com/photos/MADarGmvW0Y/) by NADOFOTOS
 - [kladdkaka.png](https://www.canva.com/photos/MABMXls1wWY/) by Danny Smythe
 - [semla.png](https://www.canva.com/photos/MAE0-ydBtwI/) by Iuliia Nedrygailova's Images
-- [big-bulle.png](https://www.canva.com/photos/MADFFMlcknU/) by exopixel
-- [headerimg.png](https://www.canva.com/photos/MAFDtHJUsUc/) by grafvision
+- [bulle.png](https://www.canva.com/photos/MADFFMlcknU/) by exopixel
+- [hero-img-bulle.png](https://www.canva.com/photos/MAFDtHJUsUc/) by grafvision
 
 This image was sourced from [CleanPNG:](https://www.cleanpng.com/)
 
@@ -49,6 +49,8 @@ This image was sourced from [CleanPNG:](https://www.cleanpng.com/)
 This image was created using the [Shape Divider App:](https://www.shapedivider.app/)
 - shape-divider.svg
 
+This image was created using [Canva:](https://www.canva.com/)
+- logo-fika.png
 
 ### 3D Animation
 
