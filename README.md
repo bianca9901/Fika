@@ -120,6 +120,12 @@ This command will start the development server and your project will be accessib
 ### **5. Explore and Enjoy!**
 You're all set! explore the project, interact with its features, and enjoy using it. If you encounter any issues or have feedback, feel free to open an issue on GitHub.
 
+## Known Issues
+
+### Bugs
+
+- Occasionally, users may encounter an issue where they have to refresh the page specifically to switch from <ins>dark to light mode</ins>. This behavior is currently being investigated.
+
 ## Credits
 
 ### Image Credits
