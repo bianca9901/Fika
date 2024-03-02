@@ -23,3 +23,41 @@ The project was built using the following technologies:
 - **Vercel:** A cloud platform for static sites and serverless functions, used for hosting the project. [Learn more](https://vercel.com/)
 - **GitHub:** Repository hosting and version control. [Learn more](https://github.com/)
 - **Git:** Version control. [Learn more](https://git-scm.com/)
+
+## Credits
+
+### Image Credits
+
+These images were sourced from [Canva:](https://www.canva.com/)
+
+- [profile1.png](https://www.canva.com/photos/MAFT9Dv11Ao/) by Clay Elliot
+- [profile2.png](https://www.canva.com/photos/MAFIRyOkyTc/) by vkstudio
+- [profile3.png](https://www.canva.com/photos/MAEJKFvt43w/) by laflor
+- [profile4.png](https://www.canva.com/photos/MAEMVzdhOWY/) by fizkes
+- [profile5.png](https://www.canva.com/photos/MAEHvVwd5Dw/) by rubensky15
+- [profile6.png](https://www.canva.com/photos/MADdwn9yn4Y/) by Rido
+- [profile7.png](https://www.canva.com/photos/MADarGmvW0Y/) by NADOFOTOS from Getty Images Pro
+- [kladdkaka.png](https://www.canva.com/photos/MABMXls1wWY/) by Danny Smythe
+- [semla.png](https://www.canva.com/photos/MAE0-ydBtwI/) by Iuliia Nedrygailova's Images
+- [big-bulle.png](https://www.canva.com/photos/MADFFMlcknU/) by exopixel from Getty Images
+- [headerimg.png](https://www.canva.com/photos/MAFDtHJUsUc/) by grafvision from Getty Images
+
+This image was sourced from [CleanPNG:](https://www.cleanpng.com/)
+
+- [chocklad-boll.png](https://www.cleanpng.com/png-havregrynskugle-deepavali-gifts-6597504/)
+
+This image was created using the [Shape Divider App:](https://www.shapedivider.app/)
+- shape-divider.svg
+
+
+### 3D Animation
+
+The 3D animation used in this project was sourced from [Sketchfab](https://sketchfab.com/):
+
+- **Title:** Coffee cup with plate
+- **Source:** [Coffee cup with plate on Sketchfab](https://sketchfab.com/3d-models/coffee-cup-with-plate-c3132a723f434ce2b94e2e563420ef7a)
+- **Author:** [Elen](https://sketchfab.com/Kitty999)
+- **License Type:** [CC-BY-SA-4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+- **Requirements:** Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project, be sure to copy and paste this credit wherever you share it.
