@@ -63,3 +63,74 @@ The 3D animation used in this project was sourced from [Sketchfab](https://sketc
 - **Requirements:** Author must be credited. Modified versions must have the same license. Commercial use is allowed.
 
 If you use this 3D model in your project, be sure to copy and paste this credit wherever you share it.
+
+
+## How To Use
+Follow these steps to get started with the project:
+
+### **1. Clone the Repository**
+
+First, clone the repository to your local machine using the following command:
+```
+git clone https://github.com/bianca9901/Fika.git
+```
+
+### **2. Install Dependencies**
+
+Navigate into the project directory and install the dependencies using npm or yarn:
+
+```
+cd fika
+```
+```
+npm install
+```
+or
+```
+yarn install
+```
+
+
+### **3. Set Up Resend Account and Environment Variables**
+
+- I. **Create `.env.local` File In The Root Directory Of Your Project**:
+  
+  ```
+  cd fika
+  ```
+  ```
+  touch .env.local
+  ```
+  
+- II. **Create Resend Account**:
+  Visit [Resend.com](http://resend.com/) and sign up for an account if you haven't already.
+- III. **Generate API Key**:
+    - In your Resend dashboard, navigate to API keys section.
+    - Generate a new API key by clicking on the "Create API key" button.
+- IIII. **Add API Key to Environment Variables**:
+    - Copy the API key generated in the previous step.
+    - Paste the API key into your **`.env.local`** file as follows:
+      
+        ```
+      RESEND_API_KEY=yourApiKeyHere
+        ```
+        
+- IIIII. **Update Email Address**:
+    - In your project, navigate to **`actions/SendEmail`**.
+    - Replace the email address **`"biancawikberg99@yahoo.com"`** with your own email address.
+Following these steps will ensure that your project is properly configured to use the Resend API for sending emails.
+
+### **4. Start the Development Server**
+
+Once the dependencies are installed and environment variables are set up, you can start the development server:
+```
+npm run dev
+```
+or
+```
+yarn dev
+```
+This command will start the development server and your project will be accessible at **`http://localhost:3000`** by default.
+
+### **5. Explore and Enjoy!**
+You're all set! explore the project, interact with its features, and enjoy using it. If you encounter any issues or have feedback, feel free to open an issue on GitHub.
