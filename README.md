@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Technologies Used
 
-## Getting Started
+The project was built using the following technologies:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript. [Learn more](https://www.typescriptlang.org/)
+- **Next.js**: A React framework for building server-side rendered (SSR) and statically generated (SSG) web applications. [Learn more](https://nextjs.org/)
+- **React**: A JavaScript library for building user interfaces. [Learn more](https://reactjs.org/)
+- **Tailwind CSS**: A utility-first CSS framework for quickly styling web applications. [Learn more](https://tailwindcss.com/)
+- **Framer Motion**: A library for creating animations in React applications. [Learn more](https://framer.com/motion/)
+- **React Hot Toast**: A toast notification library for React applications. [Learn more](https://react-hot-toast.com/)
+- **React Email Components**: Components for building responsive email templates in React. [Learn more](https://react.email/)
+- **React Email Tailwind**: Tailwind CSS integration for React Email Components. [Learn more](https://react.email/docs/components/tailwind)
+- **React Three Drei**: A collection of useful helpers and abstractions for Three.js in React. [Learn more](https://github.com/pmndrs/drei)
+- **React Three Fiber**: A React renderer for Three.js. [Learn more](https://github.com/pmndrs/react-three-fiber)
+- **Clsx**: A utility for constructing className strings conditionally. [Learn more](https://www.npmjs.com/package/clsx)
+- **ESLint**: A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. [Learn more](https://eslint.org/)
+- **React Confetti**: A library for creating confetti animations in React applications. [Learn more](https://www.npmjs.com/package/react-confetti)
+- **React Intersection Observer**: A React implementation of the Intersection Observer API. [Learn more](https://www.npmjs.com/package/react-intersection-observer)
+- **Resend**: A library for sending transactional emails and email campaigns. [Learn more](https://resend.io/)
+- **Three.js**: A JavaScript library used for creating and displaying 3D computer graphics on web browsers. [Learn more](https://threejs.org/)
+- **@Iconify React**: A library for using icons from multiple icon sets with React. [Learn more](https://iconify.design/)
+- **Google Fonts:** A library of free and open-source font families. [Learn more](https://fonts.google.com/)
+- **Vercel:** A cloud platform for static sites and serverless functions, used for hosting the project. [Learn more](https://vercel.com/)
+- **GitHub:** Repository hosting and version control. [Learn more](https://github.com/)
+- **Git:** Version control. [Learn more](https://git-scm.com/)
