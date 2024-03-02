@@ -1,3 +1,7 @@
+# FIKA
+
+Welcome to FIKA! This is a web application for an imaginary cafe, with traditional Swedish pastries on the menu!
+
 ## Design
 
 The color scheme chosen for the project predominantly features blue and yellow hues. Inspired by the colors of the Swedish flag, these shades evoke a sense of vibrancy and connection to Swedish culture.
