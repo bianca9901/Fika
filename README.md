@@ -130,16 +130,27 @@ You're all set! explore the project, interact with its features, and enjoy using
 
 Achieving perfect scores in lighthouse was a top priority for me, and I've fine-tuned every aspect of the application to attain these high scores.
 
-However, the only metric that falls short is accessibility, scoring 95. This is primarily attributed to the issue of "Background and foreground colors not having a sufficient contrast ratio."
+However, the only metric that falls short is accessibility, this is primarily attributed to the issue of "Background and foreground colors not having a sufficient contrast ratio."
 
 I was determined to use this specific color palette but it's worth noting that in dark mode, the application receives a flawless 100 score in accessibility as well, ensuring that users with visual impairments can still navigate the platform effectively.
 
 **Home Page Light Mode:**
-![Lighthouse Score Home Page](/public/readme/lighthouse-homepage.png)
+![Lighthouse Score Home Page light mode](/public/readme/lighthouse-homepage.png)
 
 **Home Page Dark Mode:**
-![Lighthouse Score Home Page darkmode](/public/readme/lighthouse-homepage-darkmode.png)
+![Lighthouse Score Home Page dark mode](/public/readme/lighthouse-homepage-darkmode.png)
 
+**Order Page Light Mode:**
+![Lighthouse Score Order Page light mode](/public/readme/lighthouse-orderpage-lightmode.png)
+
+**Order Page Dark Mode:**
+![Lighthouse Score Order Page dark mode](/public/readme/lighthouse-orderpage-darkmode.png)
+
+**Order Confirmation Page Light Mode:**
+![Lighthouse Score Order Confirmation light mode](/public/readme/lighthouse-orderconfirmationpage-lightmode.png)
+
+**Order Confirmation Page Dark Mode:**
+![Lighthouse Score Order Confirmation dark mode](/public/readme/lighthouse-orderconfirmationpage-darkmode.png)
 
 ## Credits
 
