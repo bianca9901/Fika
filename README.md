@@ -2,6 +2,8 @@
 
 Welcome to FIKA! This is a web application for an imaginary cafe, with traditional Swedish pastries on the menu!
 
+Check out the website [here!](https://fika-zeta.vercel.app/)
+
 ## Features
 
 **Browse Menu**: Explore a variety of traditional Swedish pastries available on the menu.
