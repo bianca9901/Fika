@@ -8,7 +8,7 @@
  */
 
 import bulle from "../public/bulle.png";
-import chockladboll from "../public/chocklad-boll.png";
+import chokladboll from "../public/choklad-boll.png";
 import semla from "../public/semla.png";
 import kladdkaka from "../public/kladdkaka.png";
 import profileimage1 from "../public/profile1.png";
@@ -83,9 +83,9 @@ export const fika = [
   },
   {
     id: 2,
-    title: "Chocklad Boll",
+    title: "Choklad Boll",
     tags: ["Sweet", "Chocolate"],
-    image: chockladboll,
+    image: chokladboll,
     price: 29,
   },
   {
@@ -106,14 +106,14 @@ export const fika = [
     id: 5,
     title: "Chocklad Boll",
     tags: ["Sweet", "Chocolate"],
-    image: chockladboll,
+    image: chokladboll,
     price: 29,
   },
   {
     id: 6,
     title: "Chocklad Boll",
     tags: ["Sweet", "Chocolate"],
-    image: chockladboll,
+    image: chokladboll,
     price: 29,
   },
   {
