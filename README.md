@@ -4,6 +4,11 @@ Welcome to FIKA! This is a web application for an imaginary cafe, with tradition
 
 Check out the website [here!](https://fika-zeta.vercel.app/)
 
+
+https://github.com/bianca9901/Fika/assets/134193140/222a1946-3779-4901-8593-a3e6c9dadcc0
+
+<img width="906" alt="order received in email" src="https://github.com/bianca9901/Fika/assets/134193140/78afdd73-ac1d-413e-8cd3-c3c4799af489">
+
 ## Features
 
 **Browse Menu**: Explore a variety of traditional Swedish pastries available on the menu.
